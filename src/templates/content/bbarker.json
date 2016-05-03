@@ -3,16 +3,15 @@
     "project": "Material Resume - Marcelo Paiva",
     "version": "0.0.1",
     "language": "en",
-    "description": "Professional Resume using Google's Material Design visual language. Built using modern web development workflow tools, such as Bower for package mamagement, Gulp and plugins for web development task management, Jade as HTML template language and Materialize SASS as CSS scaffolding."
+    "description": "Resume using Google's Material Design visual language. Built using modern web development workflow tools, such as Bower for package mamagement, Gulp and plugins for web development task management, Jade as HTML template language and Materialize SASS as CSS scaffolding."
   },
-  "name": "Marcelo Paiva",
-  "title": "User Experience Director",
-  "photo": "images/mpaiva2.jpg",
+  "name": "Brandon Barker",
+  "title": "Software Developer",
+  "photo": "images/bbarker.png",
   "biography": {
     "label": "Summary",
     "icon": "mdi-social-person-outline",
-    "p1": "More than 15 years building productive design teams,  solving complex systems challenges and developing thoughtful expertise to foster modern design practices in Agile development environments for mobile and web applications. ",
-    "p2": "Extensive leadership with designers and front-end developers, while enabling a creative environment of success for colleagues and team members."
+    "p1": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From prosthetic arms to educational learning platforms, to drones, it has been my goal to be a part of the future and make something that would change the world amazing. Learning is important to me, causing me to regularly put myself through circumstances that pushes the boundaries of my knowledge."
   },
   "contact": {
     "label": "Contact",
@@ -21,22 +20,22 @@
       {
         "title": "phone",
         "icon": "fa-phone-square",
-        "value": "617-480-2837",
-        "href": "tel:6174802837",
+        "value": "+1 (215) 530-1609",
+        "href": "tel:2155301609",
         "type": ""
       },
       {
         "title": "email",
         "icon": "fa-envelope-square",
-        "value": "mpaiva@gmail.com",
-        "href": "mailto:mpaiva@gmail.com",
+        "value": "brandon@brandonbarker.me",
+        "href": "mailto:brandon@brandonbarker.me",
         "type": ""
       },
       {
         "title": "twitter",
         "icon": "fa-twitter-square",
-        "value": "@muqueca",
-        "href": "https://twitter.com/muqueca",
+        "value": "@projectbarks",
+        "href": "https://twitter.com/ProjectBarks",
         "type": ""
       },
       {
