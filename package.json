@@ -1,16 +1,16 @@
 {
-  "name": "material-design-0",
+  "name": "Personal Resume",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mpaiva/material-resume.git"
+    "url": "https://github.com/ProjectBarks/material-resume.git"
   },
   "description": "Professional Resume using Google's Material Design visual language. Built using modern web development workflow tools, such as Bower for package mamagement, Gulp and plugins for web development task management, Jade as HTML template language and Materialize SASS as CSS scaffolding.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marcelo Paiva <mpaiva@gmail.com> (http://paiva.cc/)",
+  "author": "Brandon Barker <brandon@brandonbarker.me> (http://brandonbarker.me/)",
   "license": "MIT",
   "devDependencies": {
     "browserify": "^9.0.3",
@@ -26,7 +26,7 @@
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^1.0.0-alpha.3",
-    "gulp-sass": "^1.3.3",
+    "gulp-sass": "^2.3.1",
     "gulp-shell": "^0.3.0",
     "gulp-streamify": "0.0.5",
     "gulp-svgmin": "^1.1.1",
