@@ -1,39 +1,39 @@
 extends partials/_base-template.jade
 
 append config
-	- var language     = "en"
-	- var bootstrap    = false
-	- var fontAwesome  = true
-	- var materialize  = true
-	- var jQuery       = true
-	- var customStyles = true
+    - var language     = "en"
+    - var bootstrap    = false
+    - var fontAwesome  = true
+    - var materialize  = true
+    - var jQuery       = true
+    - var customStyles = true
 
 
-	- var metaDescription = "Description about the page."
+    - var metaDescription = "Description about the page."
 
 //- head blocks
 
 block append metatags
-	meta( name='description', content='')
+    meta( name='description', content='')
 
 
 //- mixins
-//- I know I will have a mix for each repeting sesction of my resume
+//- I know I will have a mix for each repeting sesction of my
 
 
 mixin showNode(node)
-	each item, key in node
-		p #{key} : #{item}
+    each item, key in node
+        p #{key} : #{item}
 
 mixin fa(icon, size)
-	//- sizes: lg, 2x, 3x, 4x, 5x
-	i.fa(class="#{icon} fa-#{size} ") 
+    //- sizes: lg, 2x, 3x, 4x, 5x
+    i.fa(class="#{icon} fa-#{size} ")
 
 
 
 //- body blocks
 
 append config
-	- var bodyClasses = ['blue-grey', 'lighten-5']
+    - var bodyClasses = ['blue-grey', 'lighten-5']
 
 

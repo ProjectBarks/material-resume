@@ -12,7 +12,8 @@
     "test",
     "tests"
   ],
+  "directory" : "bower_components",
   "dependencies": {
-    "materialize": "~0.95.2"
+    "materialize": "~0.97.6"
   }
 }

@@ -1,0 +1,31 @@
+mixin card(title, tags, description, short_description, image)
+    .card
+        .card-image.waves-effect.waves-block.waves-light
+            img.activator(src=image)
+        .card-content
+            span.card-title.activator.grey-text.text-darken-4 #{title}
+                i.right.mdi-navigation-more-vert.fa-md
+            p #{short_description}
+        .card-reveal
+            span.card-title.grey-text.text-darken-4 #{title}
+                i.right.mdi-navigation-close.fa-md
+            p #{description}
+            if tags
+                .chips
+                    each tag in tags
+                        .chip.hide-on-med-and-down #{tag}
+.row
+    - var length = locals.project.items.length
+    - var halfLength = Math.ceil(length / 2)
+    .col.l6.s12
+        - var x = 0
+        while (x < halfLength)
+            - var item = locals.project.items[x]
+            +card(item.title, item.tags, item.description, item.short_description, item.image)
+            - x += 1
+    .col.l6.s12
+        - var x = halfLength
+        while (x < length)
+            - var item = locals.project.items[x]
+            +card(item.title, item.tags, item.description, item.short_description, item.image)
+            - x += 1

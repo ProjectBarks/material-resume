@@ -3,7 +3,6 @@ var shell = require('gulp-shell');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 var notify = require('gulp-notify');
@@ -13,34 +12,29 @@ var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var livereload = require('gulp-livereload');
 var bowerFiles = require('main-bower-files');
+var fs = require('fs');
 
-
-var resumeData = require('./src/templates/content/bbarker.json');
-
-
+var content = './src/templates/content/bbarker.json';
+var outputDir = 'builds/';
 var env = process.env.NODE_ENV || 'development';
 
-var outputDir = 'builds/';
-var materializeDir = 'bower_components/materialize/';
-var jQueryDir = 'bower_components/jquery/dist/';
-
-
-gulp.task('shell', shell.task([
-    'clear'
-]));
+function isDevelopment() {
+    return env === 'development';
+}
 
 gulp.task('jade', function () {
+    var contentData = JSON.parse(fs.readFileSync(content));
     return gulp.src('src/templates/**/!(_)*.jade')
         .pipe(plumber())
         .pipe(
-            gulpif(env === 'development',
-                                jade({
+            gulpif(isDevelopment(),
+                jade({
                     pretty: true,
-                    locals: resumeData
+                    locals: contentData
                 }),
-                                jade({
+                jade({
                     pretty: false,
-                    locals: resumeData
+                    locals: contentData
                 })
             ))
         .pipe(gulp.dest(outputDir + env))
@@ -72,12 +66,12 @@ gulp.task('sass', function () {
     return gulp.src('src/sass/**/!(_)*.scss')
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(
-            gulpif(env === 'development',
-                                sass({sourceComments: 'map'}),
-                                sass()
+            gulpif(isDevelopment(),
+                sass({sourceComments: 'map'}),
+                sass({outputStyle: 'compressed'})
             )
         )
-                .pipe(gulp.dest(outputDir + env + '/css/'))
+        .pipe(gulp.dest(outputDir + env + '/css/'))
         .pipe(notify({
             message: "<%= file.relative %> created successfuly",
             templateOptions: {
@@ -118,9 +112,22 @@ gulp.task('downloads', function () {
         .pipe(livereload())
 });
 
+gulp.task('javascript', function () {
+    return gulp.src('src/js/*.*')
+        .pipe(plumber())
+        .pipe(gulp.dest(outputDir + env + '/js/'))
+        .pipe(notify({
+            message: "<%= file.relative %> created successfuly",
+            templateOptions: {
+                date: new Date()
+            }
+        }))
+        .pipe(livereload())
+});
 
 gulp.task('watch', function () {
-    var server = livereload.listen();
+    livereload.listen();
+    gulp.watch('src/js/**/*.*', ['javascript']);
     gulp.watch('src/templates/**/*.*', ['jade']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('bower_components/**/*.*', ['bowerFiles']);
@@ -136,10 +143,10 @@ gulp.task('git', shell.task([
 ]));
 
 
-gulp.task('production', shell.task([
+gulp.task('prod', shell.task([
     'NODE_ENV=production gulp'
 ]));
 
-gulp.task('default', ['shell', 'bowerFiles', 'sass', 'jade', 'images', 'downloads', 'watch']);
+gulp.task('default', ['bowerFiles', 'sass', 'jade', 'images', 'downloads', 'javascript', 'watch']);
 
 

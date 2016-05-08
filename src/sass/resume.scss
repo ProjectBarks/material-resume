@@ -1,15 +1,11 @@
-// Side-Nav Height Variables
-
-$side-height: 2250px;
-
 // Color Variables
 
-$primary-color: #1A237E;
+$primary-color: #0D47A1;
 $contrast-color: adjust-color($primary-color, $hue: 270deg, $saturation: 30, $lightness: 10);
-$primary-dark: darken($primary-color, 50);
+$primary-dark: darken($primary-color, 8%);
 $dark-grey: #333;
 $light-grey: #888;
-$light-text: lighten($primary-color, 55);
+$light-text: lighten($primary-color, 55%);
 
 // Styles
 
@@ -18,392 +14,382 @@ html, body {
   overflow-x: hidden !important;
 }
 
-.light-text { color: $light-text; }
-.contrast-bg {background-color: $contrast-color !important;}
-.light-bg {background-color: $light-text !important;}
+.light-text {
+  color: $light-text;
+}
+
+.contrast-bg {
+  background-color: $contrast-color !important;
+}
+
+.light-bg {
+  background-color: $light-text !important;
+}
+
 .primary-color {
-	background: $primary-color;
+  background: $primary-color;
 }
 
 .primary-dark {
-	background: $primary-dark;
-}
-
-.primary-nav {
-	background: $contrast-color;
-}
-
-.primary-nav:hover, .btn-large:hover {
-	background: $contrast-color;
-	color: white;
-}
-
-.primary-nav i, .btn-large i {
-	color: $primary-color;
-	color: white;
-}
-
-.primary-nav:hover i, .btn-large:hover i {
-	color: contrast-color(invert($primary-color));
-}
-
-.floating-download {
-	background-color: red;
-}
-
-.floating-download:hover {
-	background-color: $contrast-color;
+  background: $primary-dark;
 }
 
 // Material Resume Styles 
 
 /* FIXING LEFT COLUMN 100% HEIGHT */
-	/* So 100% means 100% */
-	* { box-sizing: border-box;}
+/* So 100% means 100% */
+* {
+  box-sizing: border-box;
+}
 
-	/* Make the body to be as tall as browser window */
-	html, body {height: 100%; font-size:100%;}
+/* Add room for Footer */
+#side-nav {
+  margin-bottom: 0;
+  padding: 0;
+}
 
-	/* Add room for Footer */
-	#side-nav {height: $side-height; margin-bottom:0; padding:0; }
+/* Attach footer to left column */
+main .row, footer.page-footer {
+  margin: 0;
+}
 
-	
+footer.page-footer {
+  background-color: $primary-dark;
+}
 
-	/* Attach footer to left column */
-	main .row, footer.page-footer {margin:0; margin-bottom:0;}
-
-	footer.page-footer {background-color: $primary-dark;}
-
-	a {color: $primary-color;}
- 
+a {
+  color: $primary-color;
+}
 
 /* PORTRAIT PHOTO CONTAINER */
-	/* Fix photo to the top of the page */
-	.portrait {margin-top:0;}
+/* Fix photo to the top of the page */
+.portrait {
+  margin-top: 0;
+  overflow-y: visible;
+}
 
-	
-	/* Remove portrait card shadow from materialize */
-	.card.portrait, 
-	.main-nav-wrapper > .collapsible, 
-	#side-nav .card-panel,
-	#side-nav .card.portrait,
-	.facts-wrapper > .collapsible {
-	
-		-webkit-box-shadow: none;
-		   -moz-box-shadow: none;
-		        box-shadow: none; 
-		border-radius: none;
-		background-color: transparent;
+.chips {
+  position: absolute;
+  bottom: 15px;
+  margin-right: 20px;
 
-	}
+  .chip {
+    margin-bottom: 5px;
+  }
+}
 
-	.portrait-wrapper {
-		position: absolute;
-		bottom: 7px;
-		left: 0;
-		padding: 20px;
-		padding-left:19%;
-		padding-bottom: 30px;
-		display: block;
-		width: 100%;
-		color: #fff;
-	  	background: -webkit-linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
-	  	background:    -moz-linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
-	  	background:     -ms-linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
-	  	background:      -o-linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
-	  	background:         linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
+.chip {
+  display: inline-block;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0,0,0,0.6);
+  line-height: 28px;
+  padding: 0 9px;
+  border-radius: 14px;
+  background-color: #e4e4e4;
+}
 
+/** Mini Sidebar mode **/
+#side-nav.mini {
+  position: fixed;
+}
+
+#side-nav.mini .card.portrait {
+  background-color: $primary-dark !important;
+}
+
+#side-nav.mini .card.portrait img {
+  border-radius: 50%;
+  width: 120px;
+  margin: 10px 10px 10px calc(100% - 130px);
+}
+
+#side-nav.mini .card.portrait .portrait-wrapper {
+  background-image: none;
+}
+
+.card.portrait * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Remove portrait card shadow from materialize */
+.card.portrait,
+.main-nav-wrapper > .collapsible,
+#side-nav .card-panel,
+#side-nav .card.portrait,
+.facts-wrapper > .collapsible {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+#projects {
+  .header {
+    margin-bottom: 0 !important;
+  }
+
+  .content {
+    margin-top: 0 !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+  }
+}
+
+/// Styles for demo
+.text-center {
+  text-align: center;
+}
+
+.portrait-wrapper {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  padding: 20px 20px 30px 19%;
+  display: block;
+  width: 100%;
+  color: #fff;
+  background: -webkit-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  background: -moz-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  background: -ms-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  background: -o-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+
+/* FACTS AREA ON LEFT COLUMN */
+
+h5.side {
+  font-size: 110%;
+}
+
+p.side a {
+  color: $light-text;
+}
+
+.facts-wrapper {
+
+  margin-top: 0;
+}
+
+.facts-wrapper:last-child {
+  position: relative;
+  margin-bottom: 50px;
+  bottom: 0;
+}
+
+.facts-wrapper .facts-content-col {
+  padding-right: 0;
+}
+
+.facts-wrapper p {
+  margin-top: -10px;
+  padding: 16px 0;
+  font-size: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  line-height: 180%;
+  width: 100%;
+}
+
+.facts-wrapper .facts-about {
+  padding-right: 30px;
+}
+
+.fact-icon {
+  padding-right: 0;
 
 }
 
+.col.s9.facts-content-col {
+  padding-left: 0;
+}
 
+.facts-wrapper span {
+  display: block;
+  line-height: 160%;
+}
 
-	/* FACTS AREA ON LEFT COLUMN */
+.facts-content-lg {
 
-	h5.side {font-size:110%;}
+  font-size: 120%;
+  font-weight: 400;
+}
 
-	p.side a {color: $light-text;}
+.facts-content-sm {
 
-	.facts-wrapper {
+  font-size: 90%;
+  padding-bottom: 10px;
+}
 
-		margin-top: 0px;
-	}
+/* MAIN PANEL AREA */
 
-	.facts-wrapper:last-child {
-		position: relative;
-		margin-bottom: 50px;
-		bottom: 0;
-	}
+#main-panel .card-panel {
+  margin: 30px;
+  color: $dark-grey;
+}
 
-	.facts-wrapper .facts-content-col {
-		padding-right: 0;
-	}
+#main-panel .card-panel p {
+  color: $light-grey;
+  font-weight: 300;
+}
 
-	.facts-wrapper p {
-		margin-top: -10px;
-		padding: 16px 0;
-		font-size: 100%;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
-		font-weight: 300;
-		line-height: 180%;
-		width: 100%;
-	} 
-	.facts-wrapper .facts-about {
-		padding-right: 30px;
-	}
+#main-panel .card-panel h4 {
+  font-weight: 500;
+  font-size: 160%;
+}
 
-	.fact-icon { 
-		padding-right:0;
+.card-panel h5 {
+  font-size: 100%;
+  color: lighten($primary-color, 40);
+  text-transform: uppercase;
+  margin: 2rem 0 0 0;
+}
 
-	}
+#main-panel .card-panel h6 {
+  font-size: 80%;
+  color: $light-grey;
+  text-transform: uppercase;
+}
 
+#main-panel .card-panel hr {
+  border: 0;
+  height: 2px;
+  background-color: #eee;
+  margin: 30px -32px 30px 0;
+}
 
+.facts-interests p i {
+  color: $primary-color;
+  margin: 0 30px;
+}
 
-	.col.s9.facts-content-col {
-	padding-left: 0;
-	}
-	.facts-wrapper span {
-		display:block;
-		line-height: 160%;
-	}
+.contact-footer {
+  margin-top: 20px;
+}
 
-	.facts-content-lg {
-		
-		font-size: 120%;
-		font-weight: 400;
-	}
+.contact-footer a {
+  line-height: 400%;
+  margin: 10px;
+}
 
-	.facts-content-sm {
-		
-		font-size: 90%;
-		padding-bottom: 10px;
-	}
+.contact-footer a:first-of-type {
+  margin-right: 20px;
+}
 
-// Proficiency Styles - Sliders
-
-	.facts-skills-wrapper {
-		width: 85%;
-	}
-
-	.progress-label {
-		font-size: 80%
-	}
-
-	.progress-icon {
-	    height: 0px;
-	    display: block;
-	    position: relative;
-	    z-index: 1;
-	    font-size: 0.75rem;
-	}
-
-
-	.progress-fg, .progress-bg {
-		height: 2px;
-	}
-
-	.progress-bg {
-		background: $primary-dark;
-	}
-
-	/* MAIN PANEL AREA */
-
-
-	#main-panel .card-panel {
-		margin: 30px;
-		color: $dark-grey; 
-	}
-
-	#main-panel .card-panel p {
-		color: $light-grey;
-		font-weight: 300; 
-	}
-
-    #main-panel .card-panel h4 {
-		font-weight: 500;
-		font-size: 160%;
-    }
-    #main-panel .card-panel h5.role {
-		font-size: 100%;
-		color: lighten($primary-color, 40);
-		text-transform: uppercase;
-		margin: 2rem 0 0 0;
-    }
-    #main-panel .card-panel h6 {
-		font-size: 80%;
-     	color: $light-grey;
-    	text-transform: uppercase;
-    }
-    #main-panel .card-panel hr {
-    	border: 0px;
-    	height: 2px;
-    	background-color: #eee;
-    	margin: 30px -32px 30px 0;
-    }
-
-	.facts-interests p i {
-		color: $primary-color;
-		margin: 0 30px;
-	}
-
-
-
-    .contact-footer {margin-top: 20px;}
-    .contact-footer a {
-    	line-height: 400%;
-    	margin: 10px;
-    }
-    .contact-footer a:first-of-type {
-    	margin-right:20px;
-    }
-
-	blockquote {
-		margin: 20px 0;
-		padding-left: 0.75rem;
-		border-left: 3px solid lighten($primary-color, 50);
-	}
-	
+blockquote {
+  margin: 20px 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid lighten($primary-color, 50);
+}
 
 // Professional Styles
 
-	.work-company {
-		font-weight: 500;
-		color: lighten($dark-grey, 20);
-	}
+.work-company {
+  margin: 0;
+  padding: 0;
 
+  * {
+    font-weight: 500;
+    color: lighten($dark-grey, 20);
+  }
 
+  div:nth-child(2) {
+    color: lighten($dark-grey, 45);
+  }
 
-// Built with Styles
+  .col {
+    padding: 0;
+  }
+}
 
-	.built-with a {margin: 0;}
-	.built-with a:first-of-type {
-	    	margin-right:0px;
-	    }	
-	.built-with span.title {font-size: 1em;}
-	.built-with img { width: 12%; margin:0;}
+// Skills
+.progress-label {
+  font-size: 80%
+}
 
-	.job-highlight {font-size:90%;}
+.progress-icon {
+  height: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+}
 
-	.timeline-graph { width: 100%; margin: 30px 0;}
+.progress-fg, .progress-bg {
+  height: 2px;
+}
 
-	
-
-// Fork me on Github Styles
-
-	#forkongithub {
-		position:fixed;
-		display:block;
-		top:-30px;
-		right:0;
-		width:260px;
-		overflow:hidden;
-		height:260px;
-		z-index:9999;
-	}
-	#forkongithub a {
-		background: $primary-color;
-		color:#fff;
-		text-decoration:none;
-		text-align:center;
-		padding:5px 40px;
-		font-size:.825rem;
-		line-height:2rem;
-		position:relative;
-		transition:0.5s;
-		}
-	#forkongithub a {
-		width:230px;
-		position:absolute;
-		top:60px;
-		right:-60px;
-		transform:rotate(45deg);
-		-webkit-transform:rotate(45deg);
-		-ms-transform:rotate(45deg);
-		-moz-transform:rotate(45deg);
-		-o-transform:rotate(45deg);
-		box-shadow:4px 4px 10px rgba(0,0,0,0.25);
-		}
-
-	#forkongithub a:hover {
-		background: $contrast-color;
-		color:#fff;
-	}
-	#forkongithub a::before,
-	#forkongithub a::after {
-		content:"";
-		width:100%;
-		display:block;
-		position:absolute;
-		top:1px;
-		left:0;
-		height:1px;
-		background:#fff;
-		}
-	#forkongithub a::after {
-		bottom:1px;
-		top:auto;
-		}
-
-	.floating-badge {
-		position: absolute; 
-		margin-left:-50px; 
-		top:3px; 
-		right:50px; 
-		color:white; 
-		font-size:.625em; 
-		background: rgba(0,0,0,.75);
-		padding: 0 10px 3px 3px;
-		line-height: 1em;
-	}
-
-
-
-
+.progress-fg {
+  background-color: $primary-dark !important;
+}
 
 @media (max-width: 600px) {
 
-	#side-nav {height: auto;}
+  #side-nav {
+    height: auto;
+  }
 
-    div.contact-footer a {
-    	margin: 0 20px;
-    }
-    .contact-footer a:first-of-type {
-    	display: block;
-    	width: 100%;
-    	margin-left:0;
-    }
-    .built-with img { margin:0px; width: 24%;}
+  div.contact-footer a {
+    margin: 0 20px;
+  }
+  .contact-footer a:first-of-type {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .built-with img {
+    margin: 0;
+    width: 24%;
+  }
 
-   #main-panel .card-panel {
-	  margin: 10px 0px 30px;
-	  color: #333;
-	} 
+  #main-panel .card-panel {
+    margin: 10px 0 30px;
+    color: #333;
+  }
 
+  #projects .content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  * {
+    font-size: 99%;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 991px) {
 
-	#side-nav {height: ($side-height * 1.43);}
-	h4 {font-size: 1.5rem;}
-	h6 {font-size: 0.825rem; line-height: 0;}
+  h4 {
+    font-size: 1.5rem;
+  }
 
-    .built-with img { width: 24%;}
-    .contact-footer a:first-of-type {
-    	display: block;
-    	width: 100%;
-    	margin-left:0;
-    }
-    #main-panel .card-panel h4 {
+  h6 {
+    font-size: 0.825rem;
+    line-height: 0;
+  }
+
+  #main-panel .card-panel {
+    h4 {
       font-size: 3.5vw;
       line-height: 4.5vw;
     }
-    #main-panel .card-panel h5 {
+
+    h5 {
       font-size: 2.5vw;
       line-height: 3.5vw;
     }
-    #main-panel .card-panel h6 {
+
+    h6 {
       font-size: 2.0vw;
       line-height: 2.5vw;
     }
   }
+}

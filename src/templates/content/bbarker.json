@@ -1,21 +1,18 @@
 {
-  "frontmatter": {
-    "project": "Material Resume - Marcelo Paiva",
-    "version": "0.0.1",
-    "language": "en",
-    "description": "Resume using Google's Material Design visual language. Built using modern web development workflow tools, such as Bower for package mamagement, Gulp and plugins for web development task management, Jade as HTML template language and Materialize SASS as CSS scaffolding."
-  },
   "name": "Brandon Barker",
   "title": "Software Developer",
   "photo": "images/bbarker.png",
   "biography": {
     "label": "Summary",
-    "icon": "mdi-social-person-outline",
-    "p1": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From prosthetic arms to educational learning platforms, to drones, it has been my goal to be a part of the future and make something that would change the world amazing. Learning is important to me, causing me to regularly put myself through circumstances that pushes the boundaries of my knowledge."
+    "description": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From prosthetic arms, and educational learning platforms, to drones, it has been my goal to innovate for the future and create projects that will change the world. Learning is important and can be fun, which is why every year I put myself through circumstances that I would not normally be in, pushing the boundaries of my knowledge."
+  },
+  "address": {
+    "city": "Downingtown",
+    "state": "Pennsylvania",
+    "country": "United States"
   },
   "contact": {
     "label": "Contact",
-    "icon": "mdi-communication-call",
     "items": [
       {
         "title": "phone",
@@ -39,112 +36,262 @@
         "type": ""
       },
       {
-        "title": "linkedin",
-        "icon": "fa-linkedin-square",
-        "value": "linkedin.com/in/mtpaiva",
-        "href": "http://linkedin.com/in/mtpaiva",
+        "title": "skype",
+        "icon": "fa-skype",
+        "value": "bbark9.barker9",
+        "href": "skype:bbark9.barker9",
         "type": ""
       },
       {
-        "title": "website",
-        "icon": "fa-external-link-square",
-        "value": "paiva.cc",
-        "href": "http://paiva.cc",
+        "title": "github",
+        "icon": "fa-github-square",
+        "value": "ProjectBarks",
+        "href": "https://github.com/ProjectBarks",
         "type": ""
-      }
-    ]
-  },
-  "skill": {
-    "label": "Proficiency",
-    "icon": "fa-sliders",
-    "items": [
-      {
-        "icon": "fa-icon-name",
-        "label": "Sketch App / Photoshop",
-        "level": "90"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "Adobe Illustrator /inDesign",
-        "level": "95"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "Axure / Ominigraffle",
-        "level": "90"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "Marvel / Flinto / Pixate / Webflow",
-        "level": "80"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "HTML / Jade",
-        "level": "95"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "CSS / LESS / SASS / Booststrap",
-        "level": "95"
-      },
-      {
-        "icon": "fa-icon-name",
-        "label": "AngularJs / NPM / Gulp",
-        "level": "80"
       }
     ]
   },
   "job": {
-    "label": "Key Skills Assessment",
+    "label": "Career Summary",
     "highlights": [
       {
-        "role": "As Leader",
+        "title": "Work Experience",
         "items": [
           {
-            "description": "Directed team of interaction and visual designers to create responsive solution to monitor human violations in real-time, minimizing bank’s regulatory risk to zero",
-            "project": "Barclays Capital client with Sapient"
+            "title": "Software Engineer",
+            "organization": "Airphrame, Inc.",
+            "link": "http://www.airphrame.com/",
+            "location": "San Fransisco, CA",
+            "start": "July 2015",
+            "end":  "Present",
+            "description": "An unmanned vehicle technology startup developing an aerial imaging and mapping service for commercial markets. Worked on the mapping platform's aerial avoidance system and integrated video based capture. Helped optimize the server platform through micro services."
           },
           {
-            "description": "Streamlined UX budget from $4.4M/yr to 1.75M/yr (-60.3%) while establishing a lean cross-functional design and front-end development capable of delivering effectively in an Agile environment",
-            "project": "Thomson Reuters"
-          },
-          {
-            "description": "Lead product design strategy effort for an Investment Management segment, collaborating with over 10 stakeholders to brainstorm and prioritize features, define navigation patterns, and propose user interface design guidelines and framework",
-            "project": "Thomson Financial"
+            "title": "Software Engineer",
+            "organization": "Cloudmine, Inc.",
+            "link": "https://cloudmineinc.com/",
+            "location": "Philadelphia, PA",
+            "start": "July 2014",
+            "end":  "Feb. 2015",
+            "description": "A HIPAA compliant data enablement platform for healthcare, empowering users to operationalize their most sensitive data. Worked on the Android API platform to ensure continuity and scalability. Created a CI system generating docker invorments for easy automated staging and production testing."
           }
         ]
       },
       {
-        "role": "As Multidisciplinary Experience Designer",
+        "title": "Activities and Events",
         "items": [
           {
-            "description": "Improved website (lincolncenter.org) user interaction and usability, allowing better customer communication and marketing in online and offline channels, and increase online ticket sales, subscriptions, and other revenue sources",
-            "project": "Lincoln Center for the Performing Arts, as Consultant"
+            "title": "Head of Technology",
+            "organization": "Mighty Moose Ice Hockey, Inc.",
+            "link": "http://mightymooseicehockey.com",
+            "location": "Philadelphia, PA",
+            "start": "Feburary 2016",
+            "end": "Present",
+            "description": "Wanted to be more involved in the community which resulted in helping a local non-profit with their website and technical needs. Migrated them to a different web platform and currently developing their only website further. Work with the non-profit for about three hours every week."
           },
           {
-            "description": "Led team to developed interaction strategies, interaction design, prototyping, and visual design for a multidimensional site - Geography, Language and Partner",
-            "project": "Net2Phone, Inc"
+            "title": "Code for Good Competition",
+            "organization": "JPMorgan Chase & Co.",
+            "location": "New York, NY",
+            "start": "October 2015",
+            "description": "Given a list of companies you must create an application to solve a problem that are current. Created an application to motivate underprivileged kids into working to get to college through the gamification of scholarships. Although the Team was proud of the product the app did not place."
           },
           {
-            "description": "Architected, designed, and developed a front-end solution delivering thousands of co-branded web- sites and on-demand factsheet PDFs ",
-            "project": "TIAA-CREF client with NewRiver, Inc"
+            "title": "Founder and Head Organizer",
+            "organization": "STEMHacks Hackathon",
+            "location": "PA",
+            "start": "June 2014",
+            "end":  "Present",
+            "description": "One of a few high school hackathons in the Pennsylvania. The event strives to get high schoolers interested and involved in technology, having a influneced of over 400+ students around the country! By providing a fun outlet for students to invent STEMHacks helped to create the future of innovators."
+          },
+          {
+            "title": "2nd Place",
+            "organization": "HackBCA Hackathon",
+            "location": "Hackensack, NJ",
+            "start": "April 2014",
+            "description": "Competed with over 500 students to invent an application in the 24 hour deadline. Created iOculist, an app to test eyesight acuity and ended up winning second place. The event would then inspire STEMHacks after recognizing the potential of these genres of events."
+          },
+          {
+            "title": "2nd Place",
+            "organization": "Delaware Valley Science Convention",
+            "location": "Oaks, PA",
+            "start": "October 2011",
+            "description": "An invitation only competition for innovative science related projects. Developed a mind-controlled prosthetic arm. Won second place, received an award from the Navy, the Army, recieved an excellence in engineering award, and invited to Broadcom MASTERS."
+          },
+          {
+            "title": "Head Software Developer",
+            "organization": "Out of the Box Robotics",
+            "location": "Coastsville, PA",
+            "start": "Sept. 2011",
+            "end": "Present",
+            "description": "A competive team in the FIRST league winning up to the East Regional Compeition. Develop utility applications to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
           }
         ]
       }
     ]
   },
-  "timeline": {
-    "label": "Professional Experience",
-    "icon": "",
-    "p1": "User experience designer capable of establishing a creative environment for team members to show their talents, complement each other, and strive to achieve the right design solution with measurable results and accountability. A thorough understanding of contemporary methodologies, and a confident influence for small to medium sized teams to thrive in a fast paced, challenging environment while creating thoughtful, innovative good business solutions for the end user.",
-    "infographPhone1": "images/graph-timeline-skills_@2x.png",
-    "infographPhone2": "images/graph-timeline-companies_@2x.png",
-    "infographHi": "images/graph-timeline_@2x.png"
+  "skill": {
+    "label": "Software Background",
+    "language": {
+      "label": "Languages",
+      "items": [
+        {
+          "label": "Java",
+          "level": 100
+        },
+        {
+          "label": "Python",
+          "level": 100
+        },
+        {
+          "label": "JavaScript",
+          "level": 100
+        },
+        {
+          "label": "HTML / CSS / LESS",
+          "level": 100
+        },
+        {
+          "label": "CoffeeScript",
+          "level": 100
+        },
+        {
+          "label": "Bash",
+          "level": 100
+        },
+        {
+          "label": "Processing",
+          "level": 100
+        },
+        {
+          "label": "TypeScript",
+          "level": 90
+        },
+        {
+          "label": "AppleScript",
+          "level": 75
+        },
+        {
+          "label": "Lua",
+          "level": 70
+        },
+        {
+          "label": "Go",
+          "level": 60
+        },
+        {
+          "label": "C++",
+          "level": 40
+        },
+        {
+          "label": "Groovy",
+          "level": 30
+        },
+        {
+          "label": "C#",
+          "level": 30
+        }
+      ]
+    },
+    "framework": {
+      "label": "Tools and Frameworks",
+      "items": ["Node.JS", "Gulp", "Grunt", "Makefile", "ReactJS", "JQuery", "Spring", "Google Web Toolkit", "Maven", "Gradle ", "SBT", "SQL", "Postgres", "Netty", "Jackson/Json", "JDBI", "Google App Engine", "Amazon Web Services", "Heroku", "Django", "Docker", "web2py", "Flask"]
+    }
   },
-  "education": {
-    "label": "Education",
-    "icon": "mdi-social-school",
-    "description": "Electrical Designer, State Center of Technology Ferreira Viana, Rio de Janeiro , Brazil"
+  "project": {
+    "label": "Projects",
+    "items": [
+      {
+        "title": "Fancy Prox",
+        "image": "images/fancyprox.png",
+        "tags": ["Google App Engine", "Python", "Proxy", "WebApp2", "Cache"],
+        "short_description": "Simple and Available Web Proxy",
+        "description": "FancyProx is an easy to deploy proxy utilizing Google App Engine as a host. FancyProx is a more optimized proxy in comparison to others because it caches websites as it goes allowing for quicker retrieval on a secondary visit. Furthermore, because it is on google app engine it allows for users to create their own personal proxy easily."
+      },
+      {
+        "title": "MyTransfer",
+        "image": "images/mytransfer.png",
+        "tags": ["Chrome Extension", "Python", "Web Scraping", "Neural Network"],
+        "short_description": "Simple and Available Web Proxy",
+        "description": "MyTransfer integrates Learning Systems, Schoology, Edmodo, and Blackboard, and the homework management system, MyHomework, together. MyTransfer reverse engineers the MyHomework system so that you do not need to worry about adding assignments anymore. Best of all it copies all relevant information like date, time, description and more!"
+      },
+      {
+        "title": "STEM Classes",
+        "image": "images/stemclasses.png",
+        "tags": ["Native Code", "Java", "Injection", "Reflection", "Website Scraping"],
+        "short_description": "Your School Schedule in a Convenient Place",
+        "description": "Deployed to over 800 students. This tool allows a user to view the amount of time remaining in a class period and the schedule format that corresponds with the day. This was a difficult project to make because it requires native code injection to enable notifications."
+      },
+      {
+        "title": "iOculist",
+        "image": "images/ioculist.png",
+        "tags": ["iOS", "Android", "Voice Recognition", "Visual Recognition", "Simplistic UI"],
+        "short_description": "An Eye Test More Convienent than the Doctor",
+        "description": "A mobile application that tracks the distance between the user's eyes as he backs away from his phone. It uses Snellen's formulas and voice recognition to generate a highly accurate eye exam on your iOS or Android device. This test checks for visual acuity, color blindness, and astigmatism."
+      },
+      {
+        "title": "Boostogy",
+        "tags": ["Javascript", "Web Scraping", "CSS", "HTML Templates", "Chrome Extension"],
+        "image": "images/boostogy.png",
+        "short_description": "Updates schoology to be more user friendly and intuitive!",
+        "description": "Enhances Schoology with Tons of Features: Circle icons opposed to squares, Hiding classes, Rearrange classes, A stagnate sidebar and top bar, Infinite Scrolling, Removal of School Themes, Rename Classes, Popup Scroll Lock, Boostogy Settings, Quiz Highlighter and Tools, and Many minor tweaks."
+      },
+      {
+        "title": "Wordiel",
+        "tags": ["Java", "Math 2D", "QuadTree", "Word Cloud"],
+        "image": "images/wordiel.png",
+        "short_description": "Advanced Collision Based Image Generation",
+        "description": "Inspired by Wordle I attempted to make an Open Source version of API that would allow developers to easily generate word clouds. This was a fun project to make because it required an extensive math knowledge and pushed my technical ability to the next level implementing and learning algorithms to make my tool more efficient."
+      },
+      {
+        "title": "Middle Meets",
+        "tags": ["Android", "Material Design", "RESTful", "Yelp", "Google Places"],
+        "image": "images/middlemeets.png",
+        "short_description": "Spend Less Time Traveling and More Time Having Fun",
+        "description": "Middle Meets is an Android application that relies on a Java RESTful server to provide it with its necessary map data. The application allows friends and acquaintances to easily meet at a center-point based off a list of locations. I enjoyed making this project because I saw a real need in the app market."
+      },
+      {
+        "title": "STEMHacks Admin",
+        "tags": ["Python", "Google App Engine", "jQuery", "Material Design", "Bootstrap", "RESTful"],
+        "image": "images/stemhacks.png",
+        "short_description": "Planning Hackathons In One Place",
+        "description": "STEMHacks Admin is an elegantly coded dashboard the centralizes my teams functions. I created STEMHacks as a basic automatic emailer for our sponsors but the project slowly snowballed into an entire dashboard with user, chat, broadcasting, support with many other tools. STEMHacks encompasses a lot of languages and frameworks increasing its complexity while increasing the teams productivity."
+      },
+      {
+        "title": "FTC Scouter",
+        "tags": ["Android", " Material Design", " Database Sync", " Serialization"],
+        "image": "images/ftcscouter.png",
+        "short_description": "Score FTC Match and Analyze Match Data",
+        "description": "FTC Scouter is a Material Design Android application focused in collecting match data and analyzing it. The data is serialized in JSON and then converted into a mySQL database where Tableau visualizes the data. This application was fun to build because it required support for a large squee of devices and required a lot of libraries to simulate the Material Design look."
+      },
+      {
+        "title": "Beatsync",
+        "tags": ["NodeJS", " Javascript", " jQuery", " Python", " SoundCloud", "Web Protocol"],
+        "image": "images/beatsync.png",
+        "short_description": "Seamless Audio Syncing Over the Web",
+        "description": "After getting irritated when trying to listen to a song with my friend I decided to make BeatSync. BeatSync allows the user to create a playlist using their favorite streaming service and have the audio seamlessly synced between multiple devices. I enjoyed making this project because I ended up having to write my own web protocol that would allow the music to sync with no auditory difference."
+      },
+      {
+        "title": "The Laugher",
+        "tags": ["Android", "Material Design", " RESTful", "Website Bot", " Google App Engine"],
+        "image": "images/laugher.png",
+        "short_description": "A Simple App To Tell Jokes",
+        "description": "Comprised of a app engine host and an app, The Laugher, allows users to create and share jokes. This was a fun project to make not because of the sheer amount of funny jokes I saw, but the complexity of writing a bot that could scrape websites for jokes and classify them."
+      },
+      {
+        "title": "Infinity Cache",
+        "tags": ["Cache", "Serialization", "SQL", "Efficiency"],
+        "image": "images/infinitycache.png",
+        "short_description": "The Simplist Static Storage Available",
+        "description": "EasyCache is a simplistic yet well documented caching library focused towards Android in making the retrieval and serialization of objects for short term storage simplistic. Using a combination of annotations and a strong class structure EasyCache makes it efficient to quickly retrieve and store objects for later."
+      },
+      {
+        "title": "Facebook Conversation Evaluation",
+        "tags": ["Google App Engine", "Python", "Natural Language Processing", "Node", "D3"],
+        "image": "images/messenger.png",
+        "short_description": "Analyze Your Conversations through Natural Language Processing",
+        "description": "Using Natural Language Processing and data managing techniques FCE allows for a user to see the subjects brought up in a Facebook conversation and whether that conversation was a negative or positive experience. Using libraries such as D3 and NLTK the application makes it easy to display conversation metrics and information. I throughly enjoyed making this because it was something I hadn't experimented with before"
+      }
+    ]
   }
 }
