@@ -1,0 +1,22 @@
+//- work
+.col.s12.job
+    h4 #{locals.job.label}
+    each highlight in locals.job.highlights
+        h5 #{highlight.title}
+        p
+            if highlight.items
+                each item in highlight.items
+                    p
+                        .row.experience
+                            .col.l9.s12
+                                | #{item.title} &mdash;
+                                if item.link
+                                    a( href= '#{item.link}', target= '_blank') &nbsp;#{item.organization}&nbsp;
+                                else
+                                    | &nbsp;#{item.organization}&nbsp;
+                                | &mdash; #{item.location}
+                            .col.duration.l3.hide-on-small-only.right-align #{item.start}
+                                if item.end
+                                    |&nbsp;&mdash;&nbsp;#{item.end}
+
+                        | #{item.description}

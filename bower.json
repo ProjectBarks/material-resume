@@ -12,8 +12,9 @@
     "test",
     "tests"
   ],
-  "directory" : "bower_components",
   "dependencies": {
-    "materialize": "~0.97.6"
+    "materialize": "~0.97.6",
+    "typed.js": "^1.1.1",
+    "js-cookie": "^1.5.1"
   }
 }

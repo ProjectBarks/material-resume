@@ -1,5 +1,4 @@
 // Color Variables
-
 $primary-color: #0D47A1;
 $contrast-color: adjust-color($primary-color, $hue: 270deg, $saturation: 30, $lightness: 10);
 $primary-dark: darken($primary-color, 8%);
@@ -7,7 +6,87 @@ $dark-grey: #333;
 $light-grey: #888;
 $light-text: lighten($primary-color, 55%);
 
+/* INTRODUCTION */
+.disable-scroll {
+  overflow: hidden;
+}
+
+.load-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $primary-dark;
+  z-index: 1000;
+
+
+  .prelabel {
+    font-weight: bold;
+  }
+
+  .typed-strings {
+    display: none;
+  }
+
+  * {
+    color: $light-text;
+  }
+
+  .loader {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 80%;
+    max-width: 978px;
+  }
+
+  .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 // Styles
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   width: auto !important;
@@ -34,79 +113,50 @@ html, body {
   background: $primary-dark;
 }
 
-// Material Resume Styles 
-
-/* FIXING LEFT COLUMN 100% HEIGHT */
-/* So 100% means 100% */
-* {
-  box-sizing: border-box;
+a {
+  color: $primary-color;
 }
 
-/* Add room for Footer */
-#side-nav {
-  margin-bottom: 0;
-  padding: 0;
-}
-
-/* Attach footer to left column */
+/* Footer */
 main .row, footer.page-footer {
   margin: 0;
 }
 
 footer.page-footer {
   background-color: $primary-dark;
+
+  .container {
+    width: 98%;
+  }
 }
 
-a {
-  color: $primary-color;
+/* SIDEBAR */
+#side-nav {
+  margin-bottom: 0;
+  padding: 0;
 }
 
-/* PORTRAIT PHOTO CONTAINER */
-/* Fix photo to the top of the page */
 .portrait {
   margin-top: 0;
   overflow-y: visible;
 }
 
-.chips {
-  position: absolute;
-  bottom: 15px;
-  margin-right: 20px;
-
-  .chip {
-    margin-bottom: 5px;
-  }
-}
-
-.chip {
-  display: inline-block;
-  height: 28px;
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(0,0,0,0.6);
-  line-height: 28px;
-  padding: 0 9px;
-  border-radius: 14px;
-  background-color: #e4e4e4;
-}
-
-/** Mini Sidebar mode **/
+/* Mini Sidebar mode */
 #side-nav.mini {
   position: fixed;
-}
 
-#side-nav.mini .card.portrait {
-  background-color: $primary-dark !important;
-}
+  .card.portrait {
+    background-color: $primary-dark !important;
 
-#side-nav.mini .card.portrait img {
-  border-radius: 50%;
-  width: 120px;
-  margin: 10px 10px 10px calc(100% - 130px);
-}
-
-#side-nav.mini .card.portrait .portrait-wrapper {
-  background-image: none;
+    img {
+      border-radius: 50%;
+      width: 120px;
+      margin: 10px 10px 10px calc(100% - 130px);
+    }
+    .portrait-wrapper {
+      background-image: none;
+    }
+  }
 }
 
 .card.portrait * {
@@ -129,20 +179,6 @@ a {
   background-color: transparent;
 }
 
-#projects {
-  .header {
-    margin-bottom: 0 !important;
-  }
-
-  .content {
-    margin-top: 0 !important;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0;
-  }
-}
-
-/// Styles for demo
 .text-center {
   text-align: center;
 }
@@ -154,7 +190,7 @@ a {
   padding: 20px 20px 30px 19%;
   display: block;
   width: 100%;
-  color: #fff;
+  color: white;
   background: -webkit-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
   background: -moz-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
   background: -ms-linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
@@ -162,135 +198,156 @@ a {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
 }
 
-/* FACTS AREA ON LEFT COLUMN */
-
 h5.side {
   font-size: 110%;
 }
 
-p.side a {
-  color: $light-text;
-}
-
 .facts-wrapper {
-
   margin-top: 0;
-}
 
-.facts-wrapper:last-child {
-  position: relative;
-  margin-bottom: 50px;
-  bottom: 0;
-}
+  &:last-child {
+    position: relative;
+    margin-bottom: 50px;
+    bottom: 0;
+  }
 
-.facts-wrapper .facts-content-col {
-  padding-right: 0;
-}
+  .facts-content-col {
+    padding-right: 0;
+  }
 
-.facts-wrapper p {
-  margin-top: -10px;
-  padding: 16px 0;
-  font-size: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  font-weight: 300;
-  line-height: 180%;
-  width: 100%;
-}
+  a {
+    color: $light-text;
+  }
 
-.facts-wrapper .facts-about {
-  padding-right: 30px;
-}
+  p {
+    margin-top: -10px;
+    padding: 16px 0;
+    font-size: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    line-height: 180%;
+    width: 100%;
+  }
 
-.fact-icon {
-  padding-right: 0;
+  .facts-about {
+    padding-right: 30px;
 
-}
+    a {
+      text-decoration: underline;
+    }
+  }
 
-.col.s9.facts-content-col {
-  padding-left: 0;
-}
+  .fact-icon {
+    padding-right: 0;
+  }
 
-.facts-wrapper span {
-  display: block;
-  line-height: 160%;
-}
+  span {
+    display: block;
+    line-height: 160%;
+  }
 
-.facts-content-lg {
+  .facts-content-lg {
 
-  font-size: 120%;
-  font-weight: 400;
-}
+    font-size: 120%;
+    font-weight: 400;
+  }
 
-.facts-content-sm {
+  .facts-content-sm {
 
-  font-size: 90%;
-  padding-bottom: 10px;
+    font-size: 90%;
+    padding-bottom: 10px;
+  }
+
 }
 
 /* MAIN PANEL AREA */
-
 #main-panel .card-panel {
   margin: 30px;
   color: $dark-grey;
+
+  p {
+    color: $light-grey;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-weight: 500;
+    font-size: 160%;
+    color: $dark-grey;
+  }
+
+  h5 {
+    font-size: 100%;
+    color: lighten($primary-color, 40);
+    text-transform: uppercase;
+    margin: 2rem 0 0 0;
+  }
+
+  h6 {
+    font-size: 80%;
+    color: $light-grey;
+    text-transform: uppercase;
+  }
+
+  hr {
+    border: 0;
+    height: 2px;
+    background-color: #eee;
+    margin: 30px -32px 30px 0;
+  }
 }
 
-#main-panel .card-panel p {
-  color: $light-grey;
-  font-weight: 300;
-}
-
-#main-panel .card-panel h4 {
-  font-weight: 500;
-  font-size: 160%;
-}
-
-.card-panel h5 {
-  font-size: 100%;
-  color: lighten($primary-color, 40);
-  text-transform: uppercase;
-  margin: 2rem 0 0 0;
-}
-
-#main-panel .card-panel h6 {
-  font-size: 80%;
-  color: $light-grey;
-  text-transform: uppercase;
-}
-
-#main-panel .card-panel hr {
-  border: 0;
-  height: 2px;
-  background-color: #eee;
-  margin: 30px -32px 30px 0;
-}
-
-.facts-interests p i {
-  color: $primary-color;
-  margin: 0 30px;
-}
-
-.contact-footer {
-  margin-top: 20px;
-}
-
-.contact-footer a {
-  line-height: 400%;
-  margin: 10px;
-}
-
-.contact-footer a:first-of-type {
+.chips {
+  position: absolute;
+  bottom: 15px;
   margin-right: 20px;
+
+  .chip {
+    margin-bottom: 5px;
+  }
 }
 
-blockquote {
-  margin: 20px 0;
-  padding-left: 0.75rem;
-  border-left: 3px solid lighten($primary-color, 50);
+.chip {
+  display: inline-block;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 28px;
+  padding: 0 9px;
+  border-radius: 14px;
+  background-color: #e4e4e4;
+}
+
+.card-anchor {
+  color: $light-grey;
+  padding-left: 5px;
+  &:hover {
+    color: $dark-grey;
+  }
+}
+
+// Projects Wrapper
+#projects {
+  .header {
+    margin-bottom: 0 !important;
+  }
+
+  .content {
+    margin-top: 0 !important;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  .card a {
+    margin: 0;
+    color: $primary-color;
+  }
 }
 
 // Professional Styles
-
-.work-company {
+.experience {
   margin: 0;
   padding: 0;
 
@@ -299,7 +356,7 @@ blockquote {
     color: lighten($dark-grey, 20);
   }
 
-  div:nth-child(2) {
+  .duration {
     color: lighten($dark-grey, 45);
   }
 
@@ -309,62 +366,38 @@ blockquote {
 }
 
 // Skills
-.progress-label {
-  font-size: 80%
-}
+.skill {
 
-.progress-icon {
-  height: 0;
-  display: block;
-  position: relative;
-  z-index: 1;
-  font-size: 0.8rem;
-}
-
-.progress-fg, .progress-bg {
-  height: 2px;
-}
-
-.progress-fg {
-  background-color: $primary-dark !important;
-}
-
-@media (max-width: 600px) {
-
-  #side-nav {
-    height: auto;
+  .label {
+    font-size: 80%
   }
 
-  div.contact-footer a {
-    margin: 0 20px;
-  }
-  .contact-footer a:first-of-type {
+  .slider {
+    height: 0;
     display: block;
-    width: 100%;
-    margin-left: 0;
-  }
-  .built-with img {
-    margin: 0;
-    width: 24%;
+    position: relative;
+    z-index: 1;
+    font-size: 0.8rem;
+    color: $primary-dark;
   }
 
-  #main-panel .card-panel {
-    margin: 10px 0 30px;
-    color: #333;
+  .progress, .determinate {
+    height: 2px;
   }
 
-  #projects .content {
-    margin-left: 0;
-    margin-right: 0;
+  .determinate {
+    background-color: $primary-dark !important;
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+// Handle HD Screens
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   * {
     font-size: 99%;
   }
 }
 
+// Handle Medium IPad Type Screens
 @media (min-width: 600px) and (max-width: 991px) {
 
   h4 {
@@ -391,5 +424,31 @@ blockquote {
       font-size: 2.0vw;
       line-height: 2.5vw;
     }
+  }
+}
+
+// Handle Mobile
+@media (max-width: 600px) {
+
+  .load-wrapper * {
+    font-size: 2rem;
+  }
+
+  #side-nav {
+    height: auto;
+  }
+
+  #main-panel {
+    padding: 0;
+
+    .card-panel {
+      margin: 10px 0 30px;
+      color: #333;
+    }
+  }
+
+  #projects .content {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

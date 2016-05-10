@@ -1,10 +1,16 @@
 {
   "name": "Brandon Barker",
   "title": "Software Developer",
-  "photo": "images/bbarker.png",
+  "copyright": "2016 Copyright of Brandon Barker",
+  "introduction": {
+    "prelabel": "Hi My Name is Brandon!",
+    "label": "I am a...",
+    "items": ["Inventor", "Nerd", "Programmer", "Tinkerer"]
+  },
   "biography": {
     "label": "Summary",
-    "description": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From prosthetic arms, and educational learning platforms, to drones, it has been my goal to innovate for the future and create projects that will change the world. Learning is important and can be fun, which is why every year I put myself through circumstances that I would not normally be in, pushing the boundaries of my knowledge."
+    "photo": "images/bbarker.jpeg",
+    "description": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From <a href='#mytransfer'>prosthetic arms</a>, and <a href='#boostogy'>educational learning platforms</a>, to <a href='#ioculist'>eye exams</a>, it has been my goal to innovate for the future and create projects that will change the world. Learning is important and can be fun, which is why every year I put myself through circumstances that I would not normally be in, pushing the boundaries of my knowledge."
   },
   "address": {
     "city": "Downingtown",
@@ -53,6 +59,7 @@
   },
   "job": {
     "label": "Career Summary",
+    "tag": "career",
     "highlights": [
       {
         "title": "Work Experience",
@@ -132,6 +139,7 @@
   },
   "skill": {
     "label": "Software Background",
+    "tag": "languages",
     "language": {
       "label": "Languages",
       "items": [
@@ -200,95 +208,121 @@
   },
   "project": {
     "label": "Projects",
+    "tag": "projects",
     "items": [
       {
+        "id": "fancyprox",
+        "link": "http://fancyprox.appspot.com/",
         "title": "Fancy Prox",
-        "image": "images/fancyprox.png",
+        "image": "images/fancyprox.jpeg",
         "tags": ["Google App Engine", "Python", "Proxy", "WebApp2", "Cache"],
         "short_description": "Simple and Available Web Proxy",
         "description": "FancyProx is an easy to deploy proxy utilizing Google App Engine as a host. FancyProx is a more optimized proxy in comparison to others because it caches websites as it goes allowing for quicker retrieval on a secondary visit. Furthermore, because it is on google app engine it allows for users to create their own personal proxy easily."
       },
       {
+        "id": "mytransfer",
         "title": "MyTransfer",
-        "image": "images/mytransfer.png",
+        "image": "images/mytransfer.jpeg",
         "tags": ["Chrome Extension", "Python", "Web Scraping", "Neural Network"],
         "short_description": "Simple and Available Web Proxy",
         "description": "MyTransfer integrates Learning Systems, Schoology, Edmodo, and Blackboard, and the homework management system, MyHomework, together. MyTransfer reverse engineers the MyHomework system so that you do not need to worry about adding assignments anymore. Best of all it copies all relevant information like date, time, description and more!"
       },
       {
+        "id": "stemclasses",
+        "link": "https://github.com/ProjectBarks/STEMClasses",
         "title": "STEM Classes",
-        "image": "images/stemclasses.png",
+        "image": "images/stemclasses.jpeg",
         "tags": ["Native Code", "Java", "Injection", "Reflection", "Website Scraping"],
         "short_description": "Your School Schedule in a Convenient Place",
         "description": "Deployed to over 800 students. This tool allows a user to view the amount of time remaining in a class period and the schedule format that corresponds with the day. This was a difficult project to make because it requires native code injection to enable notifications."
       },
       {
+        "id": "ioculist",
+        "link": "https://github.com/springle/iOculist",
         "title": "iOculist",
-        "image": "images/ioculist.png",
+        "image": "images/ioculist.jpeg",
         "tags": ["iOS", "Android", "Voice Recognition", "Visual Recognition", "Simplistic UI"],
         "short_description": "An Eye Test More Convienent than the Doctor",
         "description": "A mobile application that tracks the distance between the user's eyes as he backs away from his phone. It uses Snellen's formulas and voice recognition to generate a highly accurate eye exam on your iOS or Android device. This test checks for visual acuity, color blindness, and astigmatism."
       },
       {
+        "id": "boostogy",
+        "": "https://chrome.google.com/webstore/detail/boostogy/kggdhabjkonkgnmmcnbjeiifllidfgde?utm_source=chrome-ntp-icon",
         "title": "Boostogy",
         "tags": ["Javascript", "Web Scraping", "CSS", "HTML Templates", "Chrome Extension"],
-        "image": "images/boostogy.png",
+        "image": "images/boostogy.jpeg",
         "short_description": "Updates schoology to be more user friendly and intuitive!",
         "description": "Enhances Schoology with Tons of Features: Circle icons opposed to squares, Hiding classes, Rearrange classes, A stagnate sidebar and top bar, Infinite Scrolling, Removal of School Themes, Rename Classes, Popup Scroll Lock, Boostogy Settings, Quiz Highlighter and Tools, and Many minor tweaks."
       },
       {
+        "id": "wordiel",
+        "link": "https://github.com/ProjectBarks/Wordiel",
         "title": "Wordiel",
         "tags": ["Java", "Math 2D", "QuadTree", "Word Cloud"],
-        "image": "images/wordiel.png",
+        "image": "images/wordiel.jpeg",
         "short_description": "Advanced Collision Based Image Generation",
         "description": "Inspired by Wordle I attempted to make an Open Source version of API that would allow developers to easily generate word clouds. This was a fun project to make because it required an extensive math knowledge and pushed my technical ability to the next level implementing and learning algorithms to make my tool more efficient."
       },
       {
+        "id": "middlemeets",
+        "link": "https://bitbucket.org/ProjectBarks/middlemeets",
         "title": "Middle Meets",
         "tags": ["Android", "Material Design", "RESTful", "Yelp", "Google Places"],
-        "image": "images/middlemeets.png",
+        "image": "images/middlemeets.jpeg",
         "short_description": "Spend Less Time Traveling and More Time Having Fun",
         "description": "Middle Meets is an Android application that relies on a Java RESTful server to provide it with its necessary map data. The application allows friends and acquaintances to easily meet at a center-point based off a list of locations. I enjoyed making this project because I saw a real need in the app market."
       },
       {
+        "id": "stemhacks",
+        "link": "https://github.com/ProjectBarks/STEMHacks-Admin",
         "title": "STEMHacks Admin",
         "tags": ["Python", "Google App Engine", "jQuery", "Material Design", "Bootstrap", "RESTful"],
-        "image": "images/stemhacks.png",
+        "image": "images/stemhacks.jpeg",
         "short_description": "Planning Hackathons In One Place",
         "description": "STEMHacks Admin is an elegantly coded dashboard the centralizes my teams functions. I created STEMHacks as a basic automatic emailer for our sponsors but the project slowly snowballed into an entire dashboard with user, chat, broadcasting, support with many other tools. STEMHacks encompasses a lot of languages and frameworks increasing its complexity while increasing the teams productivity."
       },
       {
+        "id": "ftcscouter",
+        "link": "https://github.com/ProjectBarks/OOTBScouter",
         "title": "FTC Scouter",
         "tags": ["Android", " Material Design", " Database Sync", " Serialization"],
-        "image": "images/ftcscouter.png",
+        "image": "images/ftcscouter.jpeg",
         "short_description": "Score FTC Match and Analyze Match Data",
         "description": "FTC Scouter is a Material Design Android application focused in collecting match data and analyzing it. The data is serialized in JSON and then converted into a mySQL database where Tableau visualizes the data. This application was fun to build because it required support for a large squee of devices and required a lot of libraries to simulate the Material Design look."
       },
       {
+        "id": "beatsync",
+        "link": "https://github.com/beatsync",
         "title": "Beatsync",
         "tags": ["NodeJS", " Javascript", " jQuery", " Python", " SoundCloud", "Web Protocol"],
-        "image": "images/beatsync.png",
+        "image": "images/beatsync.jpeg",
         "short_description": "Seamless Audio Syncing Over the Web",
         "description": "After getting irritated when trying to listen to a song with my friend I decided to make BeatSync. BeatSync allows the user to create a playlist using their favorite streaming service and have the audio seamlessly synced between multiple devices. I enjoyed making this project because I ended up having to write my own web protocol that would allow the music to sync with no auditory difference."
       },
       {
+        "id": "laugher",
+        "link": "https://github.com/ProjectBarks/TheLaugher",
         "title": "The Laugher",
         "tags": ["Android", "Material Design", " RESTful", "Website Bot", " Google App Engine"],
-        "image": "images/laugher.png",
+        "image": "images/laugher.jpeg",
         "short_description": "A Simple App To Tell Jokes",
         "description": "Comprised of a app engine host and an app, The Laugher, allows users to create and share jokes. This was a fun project to make not because of the sheer amount of funny jokes I saw, but the complexity of writing a bot that could scrape websites for jokes and classify them."
       },
       {
+        "id": "infinitycache",
+        "link": "https://github.com/ProjectBarks/infinity-cache",
         "title": "Infinity Cache",
         "tags": ["Cache", "Serialization", "SQL", "Efficiency"],
-        "image": "images/infinitycache.png",
+        "image": "images/infinitycache.jpeg",
         "short_description": "The Simplist Static Storage Available",
         "description": "EasyCache is a simplistic yet well documented caching library focused towards Android in making the retrieval and serialization of objects for short term storage simplistic. Using a combination of annotations and a strong class structure EasyCache makes it efficient to quickly retrieve and store objects for later."
       },
       {
-        "title": "Facebook Conversation Evaluation",
+        "id": "convoanalyzer",
+        "link": "https://github.com/ProjectBarks/PersonalityEvaluation",
+        "title": "Conversation Analyzer",
         "tags": ["Google App Engine", "Python", "Natural Language Processing", "Node", "D3"],
-        "image": "images/messenger.png",
+        "image": "images/messenger.jpeg",
         "short_description": "Analyze Your Conversations through Natural Language Processing",
         "description": "Using Natural Language Processing and data managing techniques FCE allows for a user to see the subjects brought up in a Facebook conversation and whether that conversation was a negative or positive experience. Using libraries such as D3 and NLTK the application makes it easy to display conversation metrics and information. I throughly enjoyed making this because it was something I hadn't experimented with before"
       }

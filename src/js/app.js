@@ -1,5 +1,46 @@
 "use strict";
 $(document).ready(function () {
+    ////////////////////////////////
+    //        Introduction        //
+    ////////////////////////////////
+    function easyType(item, callback) {
+        console.log(item, item.attr("data"));
+        item.typed({
+            strings: [item.attr("data")],
+            showCursor: false,
+            callback: callback || function () {}
+        })
+    }
+
+    function disableLoader() {
+        var wrapper = $(".load-wrapper");
+        $("html").removeClass("disable-scroll");
+        wrapper.fadeOut(250, function () {
+            wrapper.css({display: "none"});
+        });
+    }
+
+    if (Cookies.get("visited") == null) {
+        easyType($(".loader .prelabel"), function () {
+            setTimeout(function () {
+                var label = $(".loader .label");
+                easyType(label, function () {
+                    label.append("<span class='typed'></span>");
+                    $(".typed").typed({
+                        strings: $(".typed-strings span").map(function () {
+                            return $(this).text()
+                        }).toArray(),
+                        backDelay: 500,
+                        callback: disableLoader
+                    });
+                });
+            }, 500);
+        });
+    } else {
+        disableLoader();
+    }
+
+    Cookies.set("visited", "yes", { expires: 365, path: "/"});
 
     ////////////////////////////////
     //     Side Bar Controls      //
@@ -66,4 +107,50 @@ $(document).ready(function () {
     checkSidebarHeight();
     //Check if scrolling needs to be refreshed
     scrollMode.refresh();
+
+
+    ////////////////////////////////
+    //        Card Controls       //
+    ////////////////////////////////
+    var lastClicked = null;
+
+    $("#projects").find(".card").each(function() {
+        var card = $(this);
+
+        card.find(".activator").click(function() {
+            if (lastClicked != null) {
+                lastClicked.find(".disabler").click();
+            }
+            lastClicked = card;
+        });
+
+        card.find(".disabler").click(function() {
+            lastClicked.find(".waves-ripple").remove();
+        });
+    });
+
+    ////////////////////////////////
+    // Smooth Scrolling & Project //
+    ////////////////////////////////
+    $("a[href*=\"#\"]:not([href=\"#\"])").click(function() {
+        if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
+            if (target.length) {
+                $("html, body").animate({
+                    scrollTop: target.offset().top
+                }, 250);
+
+                if (target.parent().hasClass("card")) {
+                    target.parent().find(".activator")[0].click();
+                }
+                return false;
+            }
+        }
+    });
+
+    ////////////////////////////////
+    //            Navbar          //
+    ////////////////////////////////
+    $("nav").sideNav();
 });

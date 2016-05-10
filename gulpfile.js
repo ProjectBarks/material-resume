@@ -9,9 +9,12 @@ var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
 var imagemin = require('gulp-imagemin');
+var uglify = require('gulp-uglify');
+var filter = require('gulp-filter');
 var pngquant = require('imagemin-pngquant');
 var livereload = require('gulp-livereload');
 var bowerFiles = require('main-bower-files');
+var cleanCSS = require('gulp-clean-css');
 var fs = require('fs');
 
 var content = './src/templates/content/bbarker.json';
@@ -48,10 +51,19 @@ gulp.task('jade', function () {
 });
 
 gulp.task('bowerFiles', function () {
+    var jsFilter = filter('**/*.js', {restore: true});
+    var cssFilter = filter('**/*.css', {restore: true});
+
     return gulp.src(bowerFiles(), {
             base: 'bower_components'
         })
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(jsFilter)
+        .pipe(gulpif(!isDevelopment(), uglify()))
+        .pipe(jsFilter.restore)
+        .pipe(cssFilter)
+        .pipe(gulpif(!isDevelopment(), cleanCSS()))
+        .pipe(cssFilter.restore)
         .pipe(gulp.dest(outputDir + env + '/lib'))
         .pipe(notify({
             message: "<%= file.relative %> created successfuly",
@@ -115,6 +127,7 @@ gulp.task('downloads', function () {
 gulp.task('javascript', function () {
     return gulp.src('src/js/*.*')
         .pipe(plumber())
+        .pipe(gulpif(!isDevelopment(), uglify()))
         .pipe(gulp.dest(outputDir + env + '/js/'))
         .pipe(notify({
             message: "<%= file.relative %> created successfuly",
