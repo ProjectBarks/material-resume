@@ -152,5 +152,5 @@ $(document).ready(function () {
     ////////////////////////////////
     //            Navbar          //
     ////////////////////////////////
-    $("nav").sideNav();
+    $(".button-collapse").sideNav();
 });

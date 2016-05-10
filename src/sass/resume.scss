@@ -149,6 +149,7 @@ footer.page-footer {
     background-color: $primary-dark !important;
 
     img {
+      display: initial;
       border-radius: 50%;
       width: 120px;
       margin: 10px 10px 10px calc(100% - 130px);
@@ -185,7 +186,7 @@ footer.page-footer {
 
 .portrait-wrapper {
   position: absolute;
-  bottom: 7px;
+  bottom: 0;
   left: 0;
   padding: 20px 20px 30px 19%;
   display: block;
