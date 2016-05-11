@@ -153,7 +153,7 @@ gulp.task('watch', function () {
 gulp.task('git', shell.task([
     'git status',
     'git add .',
-    'git commit -m \'Changes Detected\'',
+    'git commit -m \'Code Updated\'',
     'git push origin'
 ]));
 
@@ -164,7 +164,8 @@ gulp.task('deploy', function() {
     return gulp.src(outputDir + 'production/**/*')
         .pipe(ghPages({
             branch: "master",
-            remoteUrl: "https://github.com/ProjectBarks/ProjectBarks.github.io"
+            remoteUrl: "https://github.com/ProjectBarks/ProjectBarks.github.io",
+            cname: "brandonbarker.me"
         }));
 });
 
