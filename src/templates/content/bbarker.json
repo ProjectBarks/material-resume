@@ -435,7 +435,7 @@
         "id":"screenshot",
         "link":"https://getbitbar.com/plugins/System/screenshot.1d.py",
         "title":"BitBar Screenshot",
-        "tags": ["applescript", "shell", ""],
+        "tags": ["applescript", "shell", "bitbar", "python"],
         "image":"images/bitbar.jpeg",
         "short_description":"Quick And Simple Way To Take Screenshots",
         "description": "Built ontop of BitBar, a simple dock framework, the tool allows for easy screenshots. The app utilizes AppleScript and shell to activate the machines screen capture tool and then redirects the image to where the user wants."

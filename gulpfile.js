@@ -14,6 +14,8 @@ var filter = require('gulp-filter');
 var pngquant = require('imagemin-pngquant');
 var livereload = require('gulp-livereload');
 var bowerFiles = require('main-bower-files');
+var del = require('del');
+var ghPages = require('gulp-gh-pages');
 var cleanCSS = require('gulp-clean-css');
 var fs = require('fs');
 
@@ -151,9 +153,16 @@ gulp.task('watch', function () {
 gulp.task('git', shell.task([
     'git status',
     'git add .',
-    'git commit -m \'Gulp Git task detected changes.\'',
+    'git commit -m \'Changes Detected\'',
     'git push origin'
 ]));
+
+
+gulp.task('deploy', ['git'], function() {
+    return gulp.src(outputDir + env + '/**/*')
+        .pipe(del(".project"))
+        .pipe(ghPages());
+});
 
 
 gulp.task('prod', shell.task([
@@ -161,5 +170,6 @@ gulp.task('prod', shell.task([
 ]));
 
 gulp.task('default', ['bowerFiles', 'sass', 'jade', 'images', 'downloads', 'javascript', 'watch']);
+
 
 
