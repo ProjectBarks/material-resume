@@ -104,3 +104,5 @@ node_modules
 bower_components
 
 builds
+
+.publish
