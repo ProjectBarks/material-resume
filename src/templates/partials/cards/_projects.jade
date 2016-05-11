@@ -5,15 +5,15 @@ mixin card(id, title, tags, description, short_description, image, link)
                 img.activator(src=image)
         .card-content
             span.card-title.activator.grey-text.text-darken-4 #{title}
-                i.right.mdi-navigation-more-vert.fa-md
+                i.material-icons.small.right more_vert
             p #{short_description}
         .card-reveal
             span.card-title.grey-text.text-darken-4.disabler #{title}
-                i.right.mdi-navigation-close.fa-md
+                i.material-icons.small.right close
             p #{description}
                 if link
                     br
-                    a( href= link, target="blank") More Info
+                    a( href= link, target='blank') More Info
             if tags
                 .chips
                     each tag in tags

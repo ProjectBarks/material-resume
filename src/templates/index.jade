@@ -5,41 +5,41 @@ html.disable-scroll
             | #{locals.name} - #{locals.title}
 
         //Basic Meta Tags
-        meta(http-equiv="content-type", content="text/html; charset=UTF-8")
-        meta(name="author", content=locals.name)
-        meta(name="description", content=locals.biography.description)
-        meta(name="keywords", content="")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+        meta(name='author', content=locals.name)
+        meta(name='description', content=locals.biography.description)
+        meta(name='keywords', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 
         //Facebook
-        meta(property="og:image" content=locals.biography.photo)
+        meta(property='og:image' content=locals.biography.photo)
         meta(property=locals.biography.description)
-        meta(property="og:title" content=locals.name + '-' + locals.title)
+        meta(property='og:title' content=locals.name + '-' + locals.title)
 
         //Twitter
-        meta(name="twitter:card" content="summary")
-        meta(name="twitter:title" content=locals.name + '-' + locals.title)
-        meta(name="twitter:description" content=locals.biography.description)
-        meta(name="twitter:image" content=locals.biography.photo)
+        meta(name='twitter:card' content='summary')
+        meta(name='twitter:title' content=locals.name + '-' + locals.title)
+        meta(name='twitter:description' content=locals.biography.description)
+        meta(name='twitter:image' content=locals.biography.photo)
 
         //Stylesheets
-        link( rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" )
-        link( rel="stylesheet", href="lib/materialize/bin/materialize.css" )
-        link( rel="stylesheet", href="css/resume.css" )
+        link( rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' )
+        link( href= 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet' )
+        link( rel='stylesheet', href='lib/materialize/bin/materialize.css' )
+        link( rel='stylesheet', href='css/resume.css' )
 
         //Scripts
-        script( src="lib/jquery/dist/jquery.js", type="text/javascript")
-        script( src="lib/typed.js/dist/typed.min.js", type="text/javascript")
-        script( src="lib/materialize/bin/materialize.js", type="text/javascript")
-        script( src="lib/js-cookie/src/js.cookie.js", type="text/javascript")
-        script( src="js/app.js", type="text/javascript")
+        script( src='lib/jquery/dist/jquery.js', type='text/javascript')
+        script( src='lib/typed.js/dist/typed.min.js', type='text/javascript')
+        script( src='lib/materialize/bin/materialize.js', type='text/javascript')
+        script( src='lib/js-cookie/src/js.cookie.js', type='text/javascript')
+        script( src='js/app.js', type='text/javascript')
 
     //- Body Layout Starts
     body(class=['blue-grey', 'lighten-5'])
         main
             include partials/_introduction
 
-            include partials/_navbar
             .row
                 //- Left Column
                 include partials/_sidebar
@@ -47,7 +47,6 @@ html.disable-scroll
                 //- Content Column
                 include partials/_main-panel
 
-
-        include partials/_footer
+            include partials/_footer
 
 

@@ -56,6 +56,7 @@ $(document).ready(function () {
             if ($(document).width() <= 600) {
                 return;
             }
+            sideNav.css({width: sideNav.width()});
             sideNav.addClass("mini");
             scrollMode.checkMargins();
             scrollMode.enabled = true;
@@ -63,6 +64,7 @@ $(document).ready(function () {
         disable: function() {
             scrollMode.enabled = false;
             sideNav.removeClass("mini");
+            sideNav.css({width: ""});
             mainPanel.css({"margin-left": ""});
             footer.css({"margin-left": ""});
         },
@@ -89,7 +91,8 @@ $(document).ready(function () {
         if ($(document).width() <= 600) {
             sideNav.css({height: ""});
         } else {
-            sideNav.css({height: $("main").height() + "px"});
+            var main = $("main");
+            sideNav.css({height: main.height() + "px", width: main.width() - mainPanel.width()});
         }
     }
 

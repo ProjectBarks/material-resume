@@ -93,6 +93,11 @@ html, body {
   overflow-x: hidden !important;
 }
 
+main {
+  max-width: 2000px;
+  margin: auto;
+}
+
 .light-text {
   color: $light-text;
 }
@@ -240,6 +245,10 @@ h5.side {
 
   .fact-icon {
     padding-right: 0;
+
+    h5 {
+      margin-top: .4rem;
+    }
   }
 
   span {
