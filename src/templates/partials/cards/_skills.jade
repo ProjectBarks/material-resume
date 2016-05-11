@@ -5,7 +5,7 @@
     mixin languagelevel(label, level)
         .row.skill
             span.label #{label}
-            i.slider.mdi-image-lens(style='left: calc(' + '#{level}' + '% - 2px);')
+            i.slider.material-icons(style='left: calc(' + '#{level}' + '% - 2px);') lens
             .progress.light-bg
                 .determinate(style='width: ' + '#{level}' + '%')
             br

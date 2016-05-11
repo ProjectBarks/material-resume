@@ -19,7 +19,6 @@ $light-text: lighten($primary-color, 55%);
   background: $primary-dark;
   z-index: 1000;
 
-
   .prelabel {
     font-weight: bold;
   }
@@ -93,11 +92,6 @@ html, body {
   overflow-x: hidden !important;
 }
 
-main {
-  max-width: 2000px;
-  margin: auto;
-}
-
 .light-text {
   color: $light-text;
 }
@@ -128,6 +122,8 @@ main .row, footer.page-footer {
 }
 
 footer.page-footer {
+  margin-left: -15px;
+  margin-right: -15px;
   background-color: $primary-dark;
 
   .container {
@@ -271,39 +267,45 @@ h5.side {
 }
 
 /* MAIN PANEL AREA */
-#main-panel .card-panel {
-  margin: 30px;
-  color: $dark-grey;
+#main-panel {
+  float: right;
+  margin: 0;
+  padding: 0;
 
-  p {
-    color: $light-grey;
-    font-weight: 300;
-  }
-
-  h4 {
-    font-weight: 500;
-    font-size: 160%;
+  .card-panel {
+    margin: 30px;
     color: $dark-grey;
-  }
 
-  h5 {
-    font-size: 100%;
-    color: lighten($primary-color, 40);
-    text-transform: uppercase;
-    margin: 2rem 0 0 0;
-  }
+    p {
+      color: $light-grey;
+      font-weight: 300;
+    }
 
-  h6 {
-    font-size: 80%;
-    color: $light-grey;
-    text-transform: uppercase;
-  }
+    h4 {
+      font-weight: 500;
+      font-size: 160%;
+      color: $dark-grey;
+    }
 
-  hr {
-    border: 0;
-    height: 2px;
-    background-color: #eee;
-    margin: 30px -32px 30px 0;
+    h5 {
+      font-size: 100%;
+      color: lighten($primary-color, 40);
+      text-transform: uppercase;
+      margin: 2rem 0 0 0;
+    }
+
+    h6 {
+      font-size: 80%;
+      color: $light-grey;
+      text-transform: uppercase;
+    }
+
+    hr {
+      border: 0;
+      height: 2px;
+      background-color: #eee;
+      margin: 30px -32px 30px 0;
+    }
   }
 }
 
@@ -388,6 +390,7 @@ h5.side {
     position: relative;
     z-index: 1;
     font-size: 0.8rem;
+    line-height: 1.2rem;
     color: $primary-dark;
   }
 
@@ -397,13 +400,6 @@ h5.side {
 
   .determinate {
     background-color: $primary-dark !important;
-  }
-}
-
-// Handle HD Screens
-@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  * {
-    font-size: 99%;
   }
 }
 
@@ -450,6 +446,7 @@ h5.side {
 
   #main-panel {
     padding: 0;
+    margin: 0;
 
     .card-panel {
       margin: 10px 0 30px;
@@ -460,5 +457,12 @@ h5.side {
   #projects .content {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+// Handle HD Screens
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  * {
+    font-size: 99%;
   }
 }

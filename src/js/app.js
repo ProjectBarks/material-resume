@@ -46,8 +46,6 @@ $(document).ready(function () {
     //     Side Bar Controls      //
     ////////////////////////////////
     var sideNav = $("#side-nav");
-    var mainPanel = $("#main-panel");
-    var footer = $("footer");
     var portraitWrapper = sideNav.find(".portrait-wrapper");
 
     var scrollMode = {
@@ -56,7 +54,6 @@ $(document).ready(function () {
             if ($(document).width() <= 600) {
                 return;
             }
-            sideNav.css({width: sideNav.width()});
             sideNav.addClass("mini");
             scrollMode.checkMargins();
             scrollMode.enabled = true;
@@ -64,16 +61,10 @@ $(document).ready(function () {
         disable: function() {
             scrollMode.enabled = false;
             sideNav.removeClass("mini");
-            sideNav.css({width: ""});
-            mainPanel.css({"margin-left": ""});
-            footer.css({"margin-left": ""});
         },
         checkMargins: function() {
             if ($(document).width() <= 600) {
                 scrollMode.disable();
-            } else  {
-                mainPanel.css({"margin-left": sideNav.width() + "px"});
-                footer.css({"margin-left": sideNav.width() + "px"})
             }
         },
         refresh: function() {
@@ -92,7 +83,7 @@ $(document).ready(function () {
             sideNav.css({height: ""});
         } else {
             var main = $("main");
-            sideNav.css({height: main.height() + "px", width: main.width() - mainPanel.width()});
+            sideNav.css({height: main.height() + "px"});
         }
     }
 
