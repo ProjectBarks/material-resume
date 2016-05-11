@@ -158,10 +158,14 @@ gulp.task('git', shell.task([
 ]));
 
 
-gulp.task('deploy', ['git'], function() {
-    return gulp.src(outputDir + env + '/**/*')
-        .pipe(del(".project"))
-        .pipe(ghPages());
+gulp.task('deploy', function() {
+    del(".project");
+
+    return gulp.src(outputDir + 'production/**/*')
+        .pipe(ghPages({
+            branch: "master",
+            remoteUrl: "https://github.com/ProjectBarks/ProjectBarks.github.io"
+        }));
 });
 
 

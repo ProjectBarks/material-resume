@@ -384,16 +384,6 @@ h5.side {
     font-size: 80%
   }
 
-  .slider {
-    height: 0;
-    display: block;
-    position: relative;
-    z-index: 1;
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-    color: $primary-dark;
-  }
-
   .progress, .determinate {
     height: 2px;
   }
