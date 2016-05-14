@@ -26,7 +26,7 @@ function isDevelopment() {
 }
 
 gulp.task('jade', function () {
-    var contentData = JSON.parse(fs.readFileSync(content.collapsible));
+    var contentData = JSON.parse(fs.readFileSync(content));
     return gulp.src('src/templates/**/!(_)*.jade')
         .pipe(plumber())
         .pipe(
