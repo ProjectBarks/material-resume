@@ -3,11 +3,9 @@ var shell = require('gulp-shell');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
-var connect = require('gulp-connect');
 var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var filter = require('gulp-filter');
@@ -28,7 +26,7 @@ function isDevelopment() {
 }
 
 gulp.task('jade', function () {
-    var contentData = JSON.parse(fs.readFileSync(content));
+    var contentData = JSON.parse(fs.readFileSync(content.collapsible));
     return gulp.src('src/templates/**/!(_)*.jade')
         .pipe(plumber())
         .pipe(

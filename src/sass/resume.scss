@@ -122,8 +122,6 @@ main .row, footer.page-footer {
 }
 
 footer.page-footer {
-  margin-left: -15px;
-  margin-right: -15px;
   background-color: $primary-dark;
 
   .container {
@@ -139,7 +137,14 @@ footer.page-footer {
 
 .portrait {
   margin-top: 0;
-  overflow-y: visible;
+  overflow: hidden;
+
+  .card-image img {
+    display: block;
+    position: relative;
+    top: -50%;
+    width: 100%
+  }
 }
 
 /* Mini Sidebar mode */
@@ -151,12 +156,19 @@ footer.page-footer {
 
     img {
       display: initial;
+      position: absolute;
       border-radius: 50%;
-      width: 120px;
-      margin: 10px 10px 10px calc(100% - 130px);
+      width: auto;
+      height: 100%;
+      padding: 10px;
+      left: initial;
+      right: 0;
+      margin-top: 0;
+      transform: translateY(50%);
     }
     .portrait-wrapper {
       background-image: none;
+      position: relative;
     }
   }
 }
@@ -174,9 +186,8 @@ footer.page-footer {
 #side-nav .card-panel,
 #side-nav .card.portrait,
 .facts-wrapper > .collapsible {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
+  -moz-box-shadow: none;
   border-radius: 0;
   background-color: transparent;
 }
