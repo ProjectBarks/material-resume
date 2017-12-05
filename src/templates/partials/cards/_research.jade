@@ -1,0 +1,9 @@
+//- work
+.col.s12.job
+    h4 #{locals.research.label}
+    each item in locals.research.items
+        p
+            .row.experience
+                .col.l9.s12
+                    a( href= '#{item.link}', target= '_blank') #{item.title}
+            | #{item.description}

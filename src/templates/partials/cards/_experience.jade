@@ -9,14 +9,15 @@
                     p
                         .row.experience
                             .col.l9.s12
-                                | #{item.title} &mdash;
                                 if item.link
-                                    a( href= '#{item.link}', target= '_blank') &nbsp;#{item.organization}&nbsp;
+                                    a( href= '#{item.link}', target= '_blank') #{item.organization}&nbsp;
                                 else
-                                    | &nbsp;#{item.organization}&nbsp;
+                                    | #{item.organization}&nbsp;
+                                | &mdash;
+                                | #{item.title}
                                 | &mdash; #{item.location}
                             .col.duration.l3.hide-on-small-only.right-align #{item.start}
                                 if item.end
-                                    |&nbsp;&mdash;&nbsp;#{item.end}
+                                    | &nbsp;&mdash;&nbsp;#{item.end}
 
                         | #{item.description}

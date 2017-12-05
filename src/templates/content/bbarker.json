@@ -26,17 +26,10 @@
     "label": "Contact",
     "items": [
       {
-        "title": "phone",
-        "icon": "fa-phone-square",
-        "value": "+1 (215) 530-1609",
-        "href": "tel:2155301609",
-        "blank": false
-      },
-      {
         "title": "email",
         "icon": "fa-envelope-square",
-        "value": "brandon@brandonbarker.me",
-        "href": "mailto:brandon@brandonbarker.me",
+        "value": "contact@brandonbarker.me",
+        "href": "mailto:contact@brandonbarker.me",
         "blank": false
       },
       {
@@ -71,20 +64,38 @@
         "items": [
           {
             "title": "Software Engineer",
-            "organization": "Airphrame, Inc.",
-            "link": "http://www.airphrame.com/",
+            "organization": "Dokkio",
+            "link": "http://dokkio.com/",
             "location": "San Francisco, CA",
-            "start": "July 2015",
+            "start": "Jul 2017",
             "end": "Present",
-            "description": "An unmanned vehicle technology startup developing an aerial imaging and mapping service for commercial markets. Worked on the mapping platform's aerial avoidance system and integrated video based capture. Helped optimize the server platform through micro services."
+            "description": "Provides a better way to search your content, give it business context, organize it, work on it with others – to make content-focused teamwork more effective. Analysed 2000GBs of data, creating a recommendation system for categorizing files and folders. Using HTML5 implemented a document preview engine capable of loading documents with hundreds of pages."
           },
           {
             "title": "Software Engineer",
-            "organization": "Cloudmine, Inc.",
+            "organization": "Yurgosky Consulting",
+            "link": "https://www.yurgoskyconsulting.com/#overview",
+            "location": "New York City, NY",
+            "start": "Jun 2016",
+            "end": "Oct 2016",
+            "description": "An analytics, strategy and technology development company focused on nonprofit, higher education, and social enterprise clients. Worked with clients like Teach For America and the Robinhood Foundation for SalesForce integrations."
+          },
+          {
+            "title": "Software Engineer",
+            "organization": "Airphrame",
+            "link": "http://www.airphrame.com/",
+            "location": "San Francisco, CA",
+            "start": "Jun 2015",
+            "end": "Oct 2015",
+            "description": "An unmanned vehicle technology startup developing an aerial imaging and mapping service for commercial markets. Optimized daily operations by building a tool capable of doing data consolidation of 100+ gigabytes from the web platform with a custom live zip micro-service. Also built the mapping platform's aerial avoidance system and integrated video based capture, capable of recording 2+ hours of footage."
+          },
+          {
+            "title": "Software Engineer",
+            "organization": "Cloudmine",
             "link": "https://cloudmineinc.com/",
             "location": "Philadelphia, PA",
-            "start": "July 2014",
-            "end": "Feb. 2015",
+            "start": "Jun 2014",
+            "end": "Aug 2014",
             "description": "A HIPAA compliant data enablement platform for healthcare, empowering users to operationalize their most sensitive data. Worked on the Android API platform to ensure continuity and scalability. Created a CI system generating docker environments for easy automated staging and production testing."
           }
         ]
@@ -93,26 +104,42 @@
         "title": "Activities and Events",
         "items": [
           {
+            "title": "Best YCDS Hack",
+            "organization": "YCPHacks Hackathon",
+            "link": "http://www.ycphacks.io/",
+            "location": "York, PA",
+            "start": "Oct 2017",
+            "description": "Developed a big data app capable of finding any person with minimal amount of information scraping through Facebook, Whitepages, and other websites. Ended up being awarded for the best in the category after the tool demonstrated it's flexibility to the judges."
+          },
+          {
+            "title": "Control Award",
+            "organization": "FTC World Competition",
+            "link": "https://www.firstinspires.org/about/press-room/caps-off-worlds-largest-celebration-of-stem-for-students?__hstc=122275988.b1b3b28d2ef3302ab007830c05bbdd66.1511801986423.1511801986423.1512448652732.2&__hssc=122275988.4.1512448652732&__hsfp=2799395789",
+            "location": "St. Louis, MO",
+            "start": "Apr 2017",
+            "description": "The control award is given to the team who has the best coding implementation along with consistent performance. Our team won for our implementation of a Kalman filter, PID drive, and integration of sensors in the control of our robot."
+          },
+          {
             "title": "Head of Technology",
             "organization": "Mighty Moose Ice Hockey, Inc.",
             "link": "http://mightymooseicehockey.com",
             "location": "Philadelphia, PA",
-            "start": "February 2016",
+            "start": "Feb 2016",
             "end": "Present",
             "description": "Volunteered to help a local non-profit with their website and technical needs. Migrated them to a different web platform and currently developing their website. Work with the non-profit for about three hours every week."
           },
           {
-            "title": "Code for Good Competition",
+            "title": "1st Place",
             "organization": "JPMorgan Chase & Co.",
             "location": "New York, NY",
-            "start": "October 2015",
+            "start": "Oct 2015",
             "description": "Given a list of companies you must create an application to solve a problem that are current. Created an application to motivate underprivileged kids into working to get to college through the gamification of scholarships. Although the Team was proud of the product the app did not place."
           },
           {
             "title": "Founder and Head Organizer",
             "organization": "STEMHacks Hackathon",
             "location": "PA",
-            "start": "June 2014",
+            "start": "Jun 2014",
             "end": "Present",
             "description": "One of a few high school hackathons in the Pennsylvania. The event strives to get high schoolers interested and involved in technology, having a influence of over 400+ students around the country! By providing a fun outlet for students to invent STEMHacks helped to create the future of innovators."
           },
@@ -120,21 +147,21 @@
             "title": "2nd Place",
             "organization": "HackBCA Hackathon",
             "location": "Hackensack, NJ",
-            "start": "April 2014",
+            "start": "Apr 2014",
             "description": "Competed with over 500 students to invent an application in the 24 hour deadline. Created iOculist, an app to test eyesight acuity and ended up winning second place. The event would then inspire STEMHacks after recognizing the potential of these genres of events."
           },
           {
             "title": "2nd Place",
             "organization": "Delaware Valley Science Convention",
             "location": "Oaks, PA",
-            "start": "October 2011",
+            "start": "Oct 2011",
             "description": "An invitation only competition for innovative science related projects. Developed a mind-controlled prosthetic arm. Won second place, received an award from the Navy, the Army, received an excellence in engineering award, and invited to Broadcom MASTERS."
           },
           {
             "title": "Head Software Developer",
             "organization": "Out of the Box Robotics",
             "location": "Coatesville, PA",
-            "start": "Sept. 2011",
+            "start": "Sep 2011",
             "end": "Present",
             "description": "A competitive team in the FIRST league winning up to the East Regional Competition. Develop utility applications to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
           }
@@ -174,6 +201,10 @@
         },
         {
           "label": "Processing",
+          "level": 100
+        },
+        {
+          "label": "Visualforce",
           "level": 100
         },
         {
@@ -235,13 +266,52 @@
       ]
     }
   },
+  "research": {
+    "label": "Research",
+    "items": [
+      {
+        "link": "./downloads/quadtree_spatialhash.pdf",
+        "title": "Quad Trees Versus Spatial Hashes",
+        "description": "From games to complex traffic control systems, collision detection plays an important role in today’s modern computers. Currently there are two algorithms – Quad-Tree and Spatial Hashing – that are often used and at times it is based on personal preference. Spatial Hashing is a “bucket” based system where an objects relative area is increased and then inserted into surrounded buckets to be queried against. Quad-Trees are a recursive data structure that divide into quadrants as an object capacity is hit and a bounding box is identified for the selection of a quadrants."
+      }
+    ]
+  },
   "project": {
     "label": "Projects",
     "tag": "projects",
     "items": [
       {
+        "id": "ycdsmatcher",
+        "link": "https://devpost.com/software/ycdsmatcher",
+        "title": "YCDSMatcher",
+        "image": "images/ycdsmatcher.jpeg",
+        "tags": [
+          "Selenium",
+          "Python",
+          "Material Design",
+          "pipl",
+          "Whitepages",
+          "Graph API"
+        ],
+        "short_description": "Former Students Seach Engine",
+        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+      },
+      {
+        "id": "vibez",
+        "title": "Vibez",
+        "image": "images/vibez.jpeg",
+        "tags": [
+          "AngularJS",
+          "ionic",
+          "NodeJS",
+          "Social Media"
+        ],
+        "short_description": "Friends Through Concerts",
+        "description": "Native angular app to connect people attending concerts with new friends."
+      },
+      {
         "id": "fancyprox",
-        "link": "http://fancyprox.appspot.com/",
+        "link": "http://fancyprox1.appspot.com/",
         "title": "Fancy Prox",
         "image": "images/fancyprox.jpeg",
         "tags": [
@@ -264,7 +334,7 @@
           "Web Scraping",
           "Neural Network"
         ],
-        "short_description": "Simple and Available Web Proxy",
+        "short_description": "Share school To MyHomework",
         "description": "MyTransfer integrates Learning Systems, Schoology, Edmodo, and Blackboard, and the homework management system, MyHomework, together. MyTransfer reverse engineers the MyHomework system so that you do not need to worry about adding assignments anymore. Best of all it copies all relevant information like date, time, description and more!"
       },
       {

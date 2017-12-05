@@ -20,6 +20,15 @@ $(document).ready(function () {
         });
     }
 
+    function textFromBackground(r, g, b) {
+
+        // Counting the perceptive luminance
+        // human eye favors green color...
+        var a = 1 - (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        console.log(a);
+        return (a < 0.5) ? '#212121' : '#ffffff';
+    }
+
     if (Cookies.get("visited") == null) {
         easyType($(".loader .prelabel"), function () {
             setTimeout(function () {
@@ -104,7 +113,7 @@ $(document).ready(function () {
 
 
     ////////////////////////////////
-    //        Card Controls       //
+    //     Card Controls & Color  //
     ////////////////////////////////
     var lastClicked = null;
 

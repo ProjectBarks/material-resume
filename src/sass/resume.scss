@@ -138,6 +138,12 @@ footer.page-footer {
 .portrait {
   margin-top: 0;
   overflow: hidden;
+  max-height: 41vw;
+  min-height: 33vw;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   .card-image img {
     display: block;
@@ -153,6 +159,9 @@ footer.page-footer {
 
   .card.portrait {
     background-color: $primary-dark !important;
+    max-height: 140px;
+    min-height: 100px;
+
 
     img {
       display: initial;

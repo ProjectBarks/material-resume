@@ -14,7 +14,17 @@
   ],
   "dependencies": {
     "materialize": "~0.97.6",
+    "font-awesome": "*",
     "typed.js": "^1.1.1",
-    "js-cookie": "^1.5.1"
+    "js-cookie": "^1.5.1",
+    "vibrant": "*"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/*.css",
+        "fonts/*"
+      ]
+    }
   }
 }

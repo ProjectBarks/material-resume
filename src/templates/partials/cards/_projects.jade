@@ -4,7 +4,7 @@ mixin card(id, title, tags, description, short_description, image, link)
         .card-image.waves-effect.waves-block.waves-light
                 img.activator(src=image)
         .card-content
-            span.card-title.activator.grey-text.text-darken-4 #{title}
+            span.card-title.activator #{title}
                 i.material-icons.small.right more_vert
             p #{short_description}
         .card-reveal

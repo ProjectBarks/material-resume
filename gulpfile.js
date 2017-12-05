@@ -1,28 +1,30 @@
 var gulp = require('gulp');
-var shell = require('gulp-shell');
+var fs = require('fs');
+var del = require('del');
+var path = require('path');
+var util = require('gulp-util');
 var jade = require('gulp-jade');
 var sass = require('gulp-sass');
-var concat = require('gulp-concat');
+var concatJS = require('gulp-concat');
+var concatCSS = require('gulp-concat-css');
 var gulpif = require('gulp-if');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var filter = require('gulp-filter');
-var pngquant = require('imagemin-pngquant');
 var livereload = require('gulp-livereload');
-var bowerFiles = require('main-bower-files');
-var del = require('del');
-var ghPages = require('gulp-gh-pages');
 var cleanCSS = require('gulp-clean-css');
-var fs = require('fs');
+var uncss = require('gulp-uncss');
+var bowerFiles = require('main-bower-files');
+var jpegtran = require('imagemin-jpegtran');
 
 var content = './src/templates/content/bbarker.json';
 var outputDir = 'builds/';
-var env = process.env.NODE_ENV || 'development';
+var env = util.env.production ? 'production' : 'development';
 
-function isDevelopment() {
-    return env === 'development';
+function isProduction() {
+    return env === 'production';
 }
 
 gulp.task('jade', function () {
@@ -30,19 +32,19 @@ gulp.task('jade', function () {
     return gulp.src('src/templates/**/!(_)*.jade')
         .pipe(plumber())
         .pipe(
-            gulpif(isDevelopment(),
+            gulpif(isProduction(),
                 jade({
-                    pretty: true,
+                    pretty: false,
                     locals: contentData
                 }),
                 jade({
-                    pretty: false,
+                    pretty: true,
                     locals: contentData
                 })
             ))
         .pipe(gulp.dest(outputDir + env))
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -53,20 +55,39 @@ gulp.task('jade', function () {
 gulp.task('bowerFiles', function () {
     var jsFilter = filter('**/*.js', {restore: true});
     var cssFilter = filter('**/*.css', {restore: true});
+    var fontFilter = filter(['**/*.eot', '**/*.woff', '**/*.woff2', '**/*.svg', '**/*.ttf'], {restore: true});
+    var vendorPath = outputDir + env + '/vendor/';
+
 
     return gulp.src(bowerFiles(), {
             base: 'bower_components'
         })
-        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
+        //JS
         .pipe(jsFilter)
-        .pipe(gulpif(!isDevelopment(), uglify()))
+        .pipe(concatJS("dist.js"))
+        .pipe(gulpif(isProduction(), uglify()))
+        .pipe(gulp.dest(vendorPath + "js"))
         .pipe(jsFilter.restore)
+        //CSS
         .pipe(cssFilter)
-        .pipe(gulpif(!isDevelopment(), cleanCSS()))
+        .pipe(concatCSS("dist.css", {rebaseUrls: false}))
+        .pipe(gulpif(isProduction(), uncss({
+            html: [outputDir + env + "/index.html"]
+        })))
+        .pipe(gulpif(isProduction(), cleanCSS()))
+        .pipe(gulp.dest(vendorPath + "css"))
         .pipe(cssFilter.restore)
-        .pipe(gulp.dest(outputDir + env + '/lib'))
+        //Fonts
+        .pipe(fontFilter)
+        .pipe(gulp.dest(function(file) {
+            var parentName = path.basename(path.dirname(file.path));
+            file.path = path.join(file.base, path.basename(file.path));
+            return path.join(vendorPath + 'fonts', parentName.toLowerCase().indexOf("font") <= -1 ? parentName : "");
+        }))
+        .pipe(fontFilter.restore)
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -76,16 +97,16 @@ gulp.task('bowerFiles', function () {
 
 gulp.task('sass', function () {
     return gulp.src('src/sass/**/!(_)*.scss')
-        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(
-            gulpif(isDevelopment(),
-                sass({sourceComments: 'map'}),
-                sass({outputStyle: 'compressed'})
+            gulpif(isProduction(),
+                sass({outputStyle: 'compressed'}),
+                sass({sourceComments: 'map'})
             )
         )
         .pipe(gulp.dest(outputDir + env + '/css/'))
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -95,15 +116,13 @@ gulp.task('sass', function () {
 
 gulp.task('images', function () {
     return gulp.src('src/assets/images/**/!(_)*.*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        /*.pipe(imagemin({
+            plugins: [jpegtran()]
+        }))*/
+        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(gulp.dest(outputDir + env + '/images/'))
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -113,10 +132,10 @@ gulp.task('images', function () {
 
 gulp.task('downloads', function () {
     return gulp.src('src/assets/downloads/**/!(_)*.*')
-        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+        .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(gulp.dest(outputDir + env + '/downloads/'))
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -127,10 +146,10 @@ gulp.task('downloads', function () {
 gulp.task('javascript', function () {
     return gulp.src('src/js/*.*')
         .pipe(plumber())
-        .pipe(gulpif(!isDevelopment(), uglify()))
+        .pipe(gulpif(isProduction(), uglify()))
         .pipe(gulp.dest(outputDir + env + '/js/'))
         .pipe(notify({
-            message: "<%= file.relative %> created successfuly",
+            message: '<%= file.relative %> created successfuly',
             templateOptions: {
                 date: new Date()
             }
@@ -147,30 +166,6 @@ gulp.task('watch', function () {
     gulp.watch('src/assets/images/**/!(_)*.*', ['images']);
     gulp.watch('src/assets/downloads/**/!(_)*.*', ['downloads']);
 });
-
-gulp.task('git', shell.task([
-    'git status',
-    'git add .',
-    'git commit -m \'Code Updated\'',
-    'git push origin'
-]));
-
-
-gulp.task('deploy', function() {
-    del(".project");
-
-    return gulp.src(outputDir + 'production/**/*')
-        .pipe(ghPages({
-            branch: "master",
-            remoteUrl: "https://github.com/ProjectBarks/ProjectBarks.github.io",
-            cname: "brandonbarker.me"
-        }));
-});
-
-
-gulp.task('prod', shell.task([
-    'NODE_ENV=production gulp'
-]));
 
 gulp.task('default', ['bowerFiles', 'sass', 'jade', 'images', 'downloads', 'javascript', 'watch']);
 
