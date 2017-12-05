@@ -294,7 +294,7 @@
           "Graph API"
         ],
         "short_description": "Former Students Seach Engine",
-        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the sources contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
       },
       {
         "id": "vibez",
@@ -307,7 +307,7 @@
           "Social Media"
         ],
         "short_description": "Friends Through Concerts",
-        "description": "Native angular app to connect people attending concerts with new friends."
+        "description": "Vibez was the result of a challenge in Outsidelands Hacks, build a way to connect people who attend the concert. Our idea was to connect people with people of similar taste so they could attend but also bond with friends. The app is built using AngularJS but depends on ionic for components, it also uses a NodeJS server for data retrieval."
       },
       {
         "id": "fancyprox",
