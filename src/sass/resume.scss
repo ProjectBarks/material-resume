@@ -446,6 +446,11 @@ h5.side {
 // Handle Mobile
 @media (max-width: 600px) {
 
+  .portrait {
+    max-height: none;
+  }
+
+
   .load-wrapper * {
     font-size: 2rem;
   }

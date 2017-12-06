@@ -438,7 +438,7 @@
           " Serialization"
         ],
         "image": "images/ftcscouter.jpeg",
-        "short_description": "Score FTC Match and Analyze Match Data",
+        "short_description": "Score FTC Match and Analyse Match Data",
         "description": "FTC Scouter is a Material Design Android application focused in collecting match data and analyzing it. The data is serialized in JSON and then converted into a mySQL database where Tableau visualizes the data. This application was fun to build because it required support for a large squee of devices and required a lot of libraries to simulate the Material Design look."
       },
       {
@@ -489,7 +489,7 @@
       {
         "id": "convoanalyzer",
         "link": "https://github.com/ProjectBarks/PersonalityEvaluation",
-        "title": "Conversation Analyzer",
+        "title": "Conversation Analyser",
         "tags": [
           "Google App Engine",
           "Python",
@@ -498,7 +498,7 @@
           "D3"
         ],
         "image": "images/messenger.jpeg",
-        "short_description": "Analyze Your Conversations through Natural Language Processing",
+        "short_description": "Analyse Your Conversations through Natural Language Processing",
         "description": "Using Natural Language Processing and data management techniques FCE allows for a user to see the subjects brought up in a Facebook conversation and whether that conversation was a negative or positive experience. Using libraries such as D3 and NLTK the application makes it easy to display conversation metrics and information. I thoroughly enjoyed making this because it was something I hadn't experimented with before"
       },
       {
