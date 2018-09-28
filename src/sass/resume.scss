@@ -133,6 +133,8 @@ footer.page-footer {
 #side-nav {
   margin-bottom: 0;
   padding: 0;
+  will-change: transform;
+  z-index: 1;
 
   &.animate-out .portrait {
     transition-duration: 0.35s;
@@ -143,7 +145,7 @@ footer.page-footer {
 
   &.animate .portrait * {
     transition-duration: 0.35s;
-    transition-property: border-radius, bottom, min-height;
+    transition-property: border-radius, bottom, min-height, transform;
     transition-timing-function: ease-out;
   }
 
@@ -220,7 +222,7 @@ h5.side {
 }
 
 .facts-wrapper {
-  margin-top: 20px;
+  margin-top: 12.5px;
 
   .facts-content-col {
     padding-right: 0;
@@ -284,10 +286,16 @@ h5.side {
   .card-panel {
     margin: 30px;
     color: $dark-grey;
+    z-index: 2;
 
     p {
-      color: $light-grey;
+      margin-top: 0;
+      color: rgba(0, 0, 0, 0.87);
       font-weight: 300;
+
+      a {
+        text-decoration: underline;
+      }
     }
 
     h4 {
@@ -361,9 +369,15 @@ h5.side {
     padding: 0;
   }
 
-  .card a {
-    margin: 0;
-    color: $primary-color;
+  .card {
+    p {
+      font-weight: 300;
+    }
+
+    a {
+      margin: 0;
+      color: $primary-color;
+    }
   }
 }
 

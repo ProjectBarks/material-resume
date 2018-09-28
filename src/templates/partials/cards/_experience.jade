@@ -1,23 +1,24 @@
 //- work
 .col.s12.job
     h4 #{locals.job.label}
+    - var group = 0
     each highlight in locals.job.highlights
         h5 #{highlight.title}
-        p
-            if highlight.items
-                each item in highlight.items
-                    p
-                        .row.experience
-                            .col.l9.s12
-                                if item.link
-                                    a( href= '#{item.link}', target= '_blank') #{item.organization}&nbsp;
-                                else
-                                    | #{item.organization}&nbsp;
-                                | &mdash;
-                                | #{item.title}
-                                | &mdash; #{item.location}
-                            .col.duration.l3.hide-on-small-only.right-align #{item.start}
-                                if item.end
-                                    | &nbsp;&mdash;&nbsp;#{item.end}
-
-                        != item.description
+        - var id = 0
+        if highlight.items
+            each item in highlight.items
+                .row.experience(data-id='#{id}', data-group='#{group}')
+                    .col.l9.s12
+                        if item.link
+                            a(href='#{item.link}', target='_blank') #{item.organization}&nbsp;
+                        else
+                            | #{item.organization}&nbsp;
+                        | &mdash;
+                        | #{item.title}
+                        | &mdash; #{item.location}
+                    .col.duration.l3.hide-on-small-only.right-align #{item.start}
+                        if item.end
+                            | &nbsp;&mdash;&nbsp;#{item.end}
+                    p !{item.description}
+                - id += 1
+        - group += 1

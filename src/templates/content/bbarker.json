@@ -332,15 +332,10 @@
         "title": "Nuclear Visualizer",
         "image": "images/titansofnuclear.jpeg",
         "tags": [
-          "Selenium",
-          "Python",
-          "Material Design",
-          "pipl",
-          "Whitepages",
-          "Graph API"
+          "Mapbox"
         ],
-        "short_description": "Former Students Seach Engine",
-        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the sources contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+        "short_description": "Map of Companies in Nuclear",
+        "description": "A map featuring over 1000+ companies working in the nuclear industry and their associated information – location, website, and short description. Built on Mapbox’s infrastructure and Github Pages static hosting, provides a simplistic visualization of the spread of data and their according categorization. All data is downloaded on the fly and uses minimal system resources."
       },
       {
         "id": "ycdsmatcher",
@@ -431,7 +426,7 @@
       },
       {
         "id": "boostogy",
-        "": "https://chrome.google.com/webstore/detail/boostogy/kggdhabjkonkgnmmcnbjeiifllidfgde?utm_source=chrome-ntp-icon",
+        "link": "https://chrome.google.com/webstore/detail/boostogy/kggdhabjkonkgnmmcnbjeiifllidfgde?utm_source=chrome-ntp-icon",
         "title": "Boostogy",
         "tags": [
           "Javascript",
