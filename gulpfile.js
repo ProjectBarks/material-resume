@@ -162,7 +162,7 @@ gulp.task('watch', function () {
     gulp.watch('src/js/**/*.*', ['javascript']);
     gulp.watch('src/templates/**/*.*', ['jade']);
     gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('bower_components/**/*.*', ['bowerFiles']);
+    //gulp.watch('bower_components/**/*.*', ['bowerFiles']);
     gulp.watch('src/assets/images/**/!(_)*.*', ['images']);
     gulp.watch('src/assets/downloads/**/!(_)*.*', ['downloads']);
 });

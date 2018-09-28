@@ -1,7 +1,7 @@
 {
   "name": "Brandon Barker",
   "title": "Software Developer",
-  "copyright": "2016 Copyright of Brandon Barker",
+  "copyright": "Copyright of Brandon Barker",
   "introduction": {
     "prelabel": "Hi My Name is Brandon!",
     "label": "I am a...",
@@ -18,7 +18,7 @@
     "description": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From <a href='#prostheticarm'>prosthetic arms</a>, and <a href='#boostogy'>educational learning platforms</a>, to <a href='#ioculist'>eye exams</a>, it has been my goal to innovate for the future and create projects that will change the world. Learning is important and can be fun, which is why every year I put myself through circumstances that I would not normally be in, pushing the boundaries of my knowledge."
   },
   "address": {
-    "city": "Downingtown",
+    "city": "Philadelphia",
     "state": "Pennsylvania",
     "country": "United States"
   },
@@ -26,31 +26,27 @@
     "label": "Contact",
     "items": [
       {
-        "title": "email",
         "icon": "fa-envelope-square",
         "value": "contact@brandonbarker.me",
         "href": "mailto:contact@brandonbarker.me",
         "blank": false
       },
       {
-        "title": "twitter",
-        "icon": "fa-twitter-square",
-        "value": "@projectbarks",
-        "href": "https://twitter.com/ProjectBarks",
+        "icon": "fa-github-square",
+        "value": "Github",
+        "href": "https://github.com/ProjectBarks",
         "blank": true
       },
       {
-        "title": "skype",
-        "icon": "fa-skype",
-        "value": "bbark9.barker9",
-        "href": "skype:bbark9.barker9",
-        "blank": false
+        "icon": "fa-linkedin",
+        "value": "LinkedIn",
+        "href": "https://github.com/ProjectBarks",
+        "blank": true
       },
       {
-        "title": "github",
-        "icon": "fa-github-square",
-        "value": "ProjectBarks",
-        "href": "https://github.com/ProjectBarks",
+        "icon": "fa-instagram",
+        "value": "Instagram",
+        "href": "https://www.instagram.com/brandonbarker15/",
         "blank": true
       }
     ]
@@ -63,16 +59,25 @@
         "title": "Work Experience",
         "items": [
           {
-            "title": "Software Engineer",
+            "title": "Software Engineer Intern",
+            "organization": "comma.ai",
+            "link": "http://comma.ai/",
+            "location": "San Francisco, CA",
+            "start": "May 2018",
+            "end": "Aug 2018",
+            "description": "Self-driving car kit developed by George Hotz; focusing on data to solve difficult problems. Designed a mapping engine capable of loading 5,000,000+ miles of data. Structured toolset to generate 3D Tiles, render the data within a browser context, and provide metadata when interacting with the mapping frontend."
+          },
+          {
+            "title": "Software Engineer Intern",
             "organization": "Dokkio",
             "link": "http://dokkio.com/",
             "location": "San Francisco, CA",
-            "start": "Jul 2017",
-            "end": "Present",
+            "start": "Jun 2017",
+            "end": "Jan 2018",
             "description": "Provides a better way to search your content, give it business context, organize it, work on it with others – to make content-focused teamwork more effective. Analysed 2000GBs of data, creating a recommendation system for categorizing files and folders. Using HTML5 implemented a document preview engine capable of loading documents with hundreds of pages."
           },
           {
-            "title": "Software Engineer",
+            "title": "Software Engineer Intern",
             "organization": "Yurgosky Consulting",
             "link": "https://www.yurgoskyconsulting.com/#overview",
             "location": "New York City, NY",
@@ -81,7 +86,7 @@
             "description": "An analytics, strategy and technology development company focused on nonprofit, higher education, and social enterprise clients. Worked with clients like Teach For America and the Robinhood Foundation for SalesForce integrations."
           },
           {
-            "title": "Software Engineer",
+            "title": "Software Engineer Intern",
             "organization": "Airphrame",
             "link": "http://www.airphrame.com/",
             "location": "San Francisco, CA",
@@ -90,7 +95,7 @@
             "description": "An unmanned vehicle technology startup developing an aerial imaging and mapping service for commercial markets. Optimized daily operations by building a tool capable of doing data consolidation of 100+ gigabytes from the web platform with a custom live zip micro-service. Also built the mapping platform's aerial avoidance system and integrated video based capture, capable of recording 2+ hours of footage."
           },
           {
-            "title": "Software Engineer",
+            "title": "Software Engineer Intern",
             "organization": "Cloudmine",
             "link": "https://cloudmineinc.com/",
             "location": "Philadelphia, PA",
@@ -102,6 +107,52 @@
       },
       {
         "title": "Activities and Events",
+        "items": [
+          {
+            "title": "Vice President",
+            "organization": "Computer Science Club",
+            "location": "West Chester University",
+            "start": "Sep 2017",
+            "end": "Present",
+            "description": "Organize club events to help enhance understanding of Computer Science topics while opening opportunities for internships. Currently perusing two new initiatives to help enhance the schools atmosphere: <a href='http://hackwcu.org/' target='_blank'>HackWCU</a>, a hackathon in the Philadelphia area where students are free to explore their interests. Innovate, a makerspace open to all students with over 10,000$ of hardware. "
+          },
+          {
+            "title": "Analyst",
+            "organization": "Investment Club",
+            "location": "West Chester University",
+            "start": "Sep 2017",
+            "end": "Present",
+            "description": "Evaluated stocks to be purchased for the growth fund – worth over $20,000. Pitched stocks to be purchased for the fund; representing 50% growth since recommendation. Collaborating with current leadership to implement a more analytics-oriented approach for evaluating other funds and performance."
+          },
+          {
+            "title": "Head of Technology",
+            "organization": "Mighty Moose Ice Hockey, Inc.",
+            "link": "http://mightymooseicehockey.com",
+            "location": "Philadelphia, PA",
+            "start": "Feb 2016",
+            "end": "Jan 2017",
+            "description": "Volunteered to help a local non-profit with their website and technical needs. Migrated them to a different web platform and currently developing their website. Work with the non-profit for about three hours every week."
+          },
+          {
+            "title": "Founder and Head Organizer",
+            "organization": "STEMHacks Hackathon",
+            "location": "STEM Academy",
+            "start": "Jun 2014",
+            "end": "May 2017",
+            "description": "One of a few high school hackathons in the Pennsylvania. The event strives to get high schoolers interested and involved in technology, having a influence of over 400+ students around the country! By providing a fun outlet for students to invent STEMHacks helped to create the future of innovators."
+          },
+          {
+            "title": "Head Software Developer",
+            "organization": "Out of the Box Robotics",
+            "location": "Coatesville, PA",
+            "start": "Sep 2011",
+            "end": "May 2017",
+            "description": "A competitive team in the FIRST league winning up to the East Regional Competition. Develop utility applications to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
+          }
+        ]
+      },
+      {
+        "title": "Awards",
         "items": [
           {
             "title": "Best YCDS Hack",
@@ -120,28 +171,11 @@
             "description": "The control award is given to the team who has the best coding implementation along with consistent performance. Our team won for our implementation of a Kalman filter, PID drive, and integration of sensors in the control of our robot."
           },
           {
-            "title": "Head of Technology",
-            "organization": "Mighty Moose Ice Hockey, Inc.",
-            "link": "http://mightymooseicehockey.com",
-            "location": "Philadelphia, PA",
-            "start": "Feb 2016",
-            "end": "Present",
-            "description": "Volunteered to help a local non-profit with their website and technical needs. Migrated them to a different web platform and currently developing their website. Work with the non-profit for about three hours every week."
-          },
-          {
             "title": "1st Place",
             "organization": "JPMorgan Chase & Co.",
             "location": "New York, NY",
             "start": "Oct 2015",
             "description": "Given a list of companies you must create an application to solve a problem that are current. Created an application to motivate underprivileged kids into working to get to college through the gamification of scholarships. Although the Team was proud of the product the app did not place."
-          },
-          {
-            "title": "Founder and Head Organizer",
-            "organization": "STEMHacks Hackathon",
-            "location": "PA",
-            "start": "Jun 2014",
-            "end": "Present",
-            "description": "One of a few high school hackathons in the Pennsylvania. The event strives to get high schoolers interested and involved in technology, having a influence of over 400+ students around the country! By providing a fun outlet for students to invent STEMHacks helped to create the future of innovators."
           },
           {
             "title": "2nd Place",
@@ -156,14 +190,6 @@
             "location": "Oaks, PA",
             "start": "Oct 2011",
             "description": "An invitation only competition for innovative science related projects. Developed a mind-controlled prosthetic arm. Won second place, received an award from the Navy, the Army, received an excellence in engineering award, and invited to Broadcom MASTERS."
-          },
-          {
-            "title": "Head Software Developer",
-            "organization": "Out of the Box Robotics",
-            "location": "Coatesville, PA",
-            "start": "Sep 2011",
-            "end": "Present",
-            "description": "A competitive team in the FIRST league winning up to the East Regional Competition. Develop utility applications to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
           }
         ]
       }
@@ -184,7 +210,7 @@
           "level": 100
         },
         {
-          "label": "JavaScript",
+          "label": "JavaScript / TypeScript",
           "level": 100
         },
         {
@@ -208,10 +234,6 @@
           "level": 100
         },
         {
-          "label": "TypeScript",
-          "level": 90
-        },
-        {
           "label": "AppleScript",
           "level": 75
         },
@@ -220,8 +242,8 @@
           "level": 70
         },
         {
-          "label": "Go",
-          "level": 60
+          "label": "Scala",
+          "level": 50
         },
         {
           "label": "C++",
@@ -240,6 +262,10 @@
     "framework": {
       "label": "Tools and Frameworks",
       "items": [
+        "WebGL",
+        "Cesium",
+        "Mapbox",
+        "Numpy",
         "Node.JS",
         "Gulp",
         "Grunt",
@@ -267,8 +293,13 @@
     }
   },
   "research": {
-    "label": "Research",
+    "label": "Research & Articles",
     "items": [
+      {
+        "link": "https://medium.com/@comma_ai/hd-maps-for-the-masses-9a0d582dd274",
+        "title": "HD Maps for the Masses",
+        "description": "The future of navigation will be centralized around HD maps. While plenty of companies exist to provide this type of data, all are limited by paywalls and strict Terms-of-Service. A new map viewer, called “comma maps,” visualizes recorded paths driven, lane markings, and world features. Discussing the benefits of comma's approach to mapping, and the release of open source tool such as <a target='_blank' href='https://github.com/commaai/entium'>entium</a>."
+      },
       {
         "link": "./downloads/quadtree_spatialhash.pdf",
         "title": "Quad Trees Versus Spatial Hashes",
@@ -280,6 +311,38 @@
     "label": "Projects",
     "tag": "projects",
     "items": [
+       {
+        "id": "entium",
+        "link": "https://github.com/commaai/entium",
+        "title": "Entium",
+        "image": "images/entium.jpeg",
+        "tags": [
+          "Selenium",
+          "Python",
+          "Material Design",
+          "pipl",
+          "Whitepages",
+          "Graph API"
+        ],
+        "short_description": "Former Students Seach Engine",
+        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the sources contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+      },
+      {
+        "id": "titansofnuclear",
+        "link": "https://map.titansofnuclear.com/",
+        "title": "Nuclear Visualizer",
+        "image": "images/titansofnuclear.jpeg",
+        "tags": [
+          "Selenium",
+          "Python",
+          "Material Design",
+          "pipl",
+          "Whitepages",
+          "Graph API"
+        ],
+        "short_description": "Former Students Seach Engine",
+        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the sources contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+      },
       {
         "id": "ycdsmatcher",
         "link": "https://devpost.com/software/ycdsmatcher",
