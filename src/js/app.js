@@ -57,19 +57,34 @@ $(document).ready(function () {
     var sideNav = $("#side-nav");
     var portraitWrapper = sideNav.find(".portrait-wrapper");
 
+    sideNav.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
+        () => {
+            console.log("end")
+            sideNav.removeClass("animate");
+            sideNav.removeClass("animate-out");
+        }
+    );
+
     var scrollMode = {
         enabled: false,
         enable: function () {
-            if ($(document).width() <= 600) {
+            if ($(document).width() <= 600) 
                 return;
-            }
+            sideNav.addClass("animate");
             sideNav.addClass("mini");
+            
+            sideNav.removeClass("animate-out");
+            
             scrollMode.checkMargins();
             scrollMode.enabled = true;
         },
         disable: function() {
-            scrollMode.enabled = false;
+            sideNav.addClass("animate");
             sideNav.removeClass("mini");
+
+            if (scrollMode.enabled) 
+                sideNav.addClass("animate-out");
+            scrollMode.enabled = false;
         },
         checkMargins: function() {
             if ($(document).width() <= 600) {

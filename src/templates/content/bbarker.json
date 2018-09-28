@@ -2,6 +2,7 @@
   "name": "Brandon Barker",
   "title": "Software Developer",
   "copyright": "Copyright of Brandon Barker",
+  "resume": "./downloads/brandon_barker_2018_resume.pdf",
   "introduction": {
     "prelabel": "Hi My Name is Brandon!",
     "label": "I am a...",
@@ -317,15 +318,13 @@
         "title": "Entium",
         "image": "images/entium.jpeg",
         "tags": [
-          "Selenium",
-          "Python",
+          "Cesium",
+          "Entwine",
           "Material Design",
-          "pipl",
-          "Whitepages",
-          "Graph API"
+          "Numpy"
         ],
-        "short_description": "Former Students Seach Engine",
-        "description": "YCDS Matcher runs on facebooks graph api, whitepages and pipl. Each of the sources contribute their own parts of the data and act as forms of validation. Its works by scraping through multiple different online sources and building a genealogy to then track down a person who you lack their information."
+        "short_description": "3D Tile Converter for Cesium",
+        "description": "Entwine is a data organization library for massive point clouds, designed to conquer datasets of hundreds of billions of points. Meanwhile, Cesium is a JavaScript library for creating 3D globes in a web browser. To bridge the gap between these two services, Entwine converts binary files into the 3D Tile format while supporting more Cesium-centric features. The tiles are optimized to reduce overhead in the browser through octree culling.  Other functionality includes: data quantization, metadata instancing, and property association."
       },
       {
         "id": "titansofnuclear",
