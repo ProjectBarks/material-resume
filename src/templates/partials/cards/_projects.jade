@@ -8,16 +8,17 @@ mixin card(id, title, tags, description, short_description, image, link)
                 i.material-icons.small.right more_vert
             p #{short_description}
         .card-reveal
-            span.card-title.grey-text.text-darken-4.disabler #{title}
-                i.material-icons.small.right close
-            p #{description}
-                if link
-                    br
-                    a( href= link, target='blank') More Info
-            if tags
-                .chips
-                    each tag in tags
-                        .chip.hide-on-med-and-down #{tag}
+            .content 
+                span.card-title.grey-text.text-darken-4.disabler #{title}
+                    i.material-icons.small.right close
+                p #{description}
+                    if link
+                        br
+                        a( href= link, target='blank') More Info
+                if tags
+                    .chips
+                        each tag in tags
+                            .chip.hide-on-med-and-down #{tag}
 .row
     - var length = locals.project.items.length
     - var halfLength = Math.ceil(length / 2)

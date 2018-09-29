@@ -2,5 +2,6 @@ footer.page-footer
     .footer-copyright
         .container
             | &copy;
+            | #{locals.copyright.start} -
             script document.write(new Date().getFullYear())
-            |  #{locals.copyright}
+            |  #{locals.copyright.value}

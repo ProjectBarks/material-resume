@@ -325,29 +325,6 @@ h5.side {
   }
 }
 
-.chips {
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  border: none;
-
-  .chip {
-    margin-bottom: 5px;
-  }
-}
-
-.chip {
-  display: inline-block;
-  height: 28px;
-  font-size: 12px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-  line-height: 28px;
-  padding: 0 9px;
-  border-radius: 14px;
-  background-color: #e4e4e4;
-}
-
 .card-anchor {
   color: $light-grey;
   padding-left: 5px;
@@ -369,9 +346,34 @@ h5.side {
     padding: 0;
   }
 
-  .card {
+  .card .content {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    height: 100%;
+
     p {
+      flex: 1;
+      overflow: auto;
       font-weight: 300;
+    }
+
+    .chips {
+      border: none;
+      margin: 0;
+
+      .chip {
+        display: inline-block;
+        height: 28px;
+        font-size: 12px;
+        font-weight: 500;
+        margin: 5px 5px 0 0;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 28px;
+        padding: 0 9px;
+        border-radius: 14px;
+        background-color: #e4e4e4;
+      }
     }
 
     a {

@@ -1,7 +1,10 @@
 {
   "name": "Brandon Barker",
   "title": "Software Developer",
-  "copyright": "Copyright of Brandon Barker",
+  "copyright": {
+    "start": "2016",
+    "value": "Copyright of Brandon Barker"
+  },
   "resume": "./downloads/brandon_barker_2018_resume.pdf",
   "introduction": {
     "prelabel": "Hi My Name is Brandon!",
@@ -332,7 +335,8 @@
         "title": "Nuclear Visualizer",
         "image": "images/titansofnuclear.jpeg",
         "tags": [
-          "Mapbox"
+          "Mapbox",
+          "Fuzzy Search"
         ],
         "short_description": "Map of Companies in Nuclear",
         "description": "A map featuring over 1000+ companies working in the nuclear industry and their associated information – location, website, and short description. Built on Mapbox’s infrastructure and Github Pages static hosting, provides a simplistic visualization of the spread of data and their according categorization. All data is downloaded on the fly and uses minimal system resources."
@@ -344,7 +348,6 @@
         "image": "images/ycdsmatcher.jpeg",
         "tags": [
           "Selenium",
-          "Python",
           "Material Design",
           "pipl",
           "Whitepages",
@@ -473,7 +476,6 @@
         "link": "https://github.com/ProjectBarks/STEMHacks-Admin",
         "title": "STEMHacks Admin",
         "tags": [
-          "Python",
           "Google App Engine",
           "jQuery",
           "Material Design",
