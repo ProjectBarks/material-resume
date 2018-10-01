@@ -18,7 +18,7 @@
   },
   "biography": {
     "label": "Summary",
-    "photo": "images/bbarker.jpeg",
+    "photo": "../assets/images/bbarker.jpeg",
     "description": "I am a proud tinkerer, inventor, nerd, student, and full-time software developer. From <a href='#prostheticarm'>prosthetic arms</a>, and <a href='#boostogy'>educational learning platforms</a>, to <a href='#ioculist'>eye exams</a>, it has been my goal to innovate for the future and create projects that will change the world. Learning is important and can be fun, which is why every year I put myself through circumstances that I would not normally be in, pushing the boundaries of my knowledge."
   },
   "address": {
@@ -319,7 +319,7 @@
         "id": "entium",
         "link": "https://github.com/commaai/entium",
         "title": "Entium",
-        "image": "images/entium.jpeg",
+        "image": "../assets/images/entium.jpeg",
         "tags": [
           "Cesium",
           "Entwine",
@@ -333,7 +333,7 @@
         "id": "titansofnuclear",
         "link": "https://map.titansofnuclear.com/",
         "title": "Nuclear Visualizer",
-        "image": "images/titansofnuclear.jpeg",
+        "image": "../assets/images//titansofnuclear.jpeg",
         "tags": [
           "Mapbox",
           "Fuzzy Search"
@@ -345,7 +345,7 @@
         "id": "ycdsmatcher",
         "link": "https://devpost.com/software/ycdsmatcher",
         "title": "YCDSMatcher",
-        "image": "images/ycdsmatcher.jpeg",
+        "image": "../assets/images//ycdsmatcher.jpeg",
         "tags": [
           "Selenium",
           "Material Design",
@@ -359,7 +359,7 @@
       {
         "id": "vibez",
         "title": "Vibez",
-        "image": "images/vibez.jpeg",
+        "image": "../assets/images//vibez.jpeg",
         "tags": [
           "AngularJS",
           "ionic",
@@ -373,7 +373,7 @@
         "id": "fancyprox",
         "link": "http://fancyprox1.appspot.com/",
         "title": "Fancy Prox",
-        "image": "images/fancyprox.jpeg",
+        "image": "../assets/images//fancyprox.jpeg",
         "tags": [
           "Google App Engine",
           "Python",
@@ -387,7 +387,7 @@
       {
         "id": "mytransfer",
         "title": "MyTransfer",
-        "image": "images/mytransfer.jpeg",
+        "image": "../assets/images//mytransfer.jpeg",
         "tags": [
           "Chrome Extension",
           "Python",
@@ -401,7 +401,7 @@
         "id": "stemclasses",
         "link": "https://github.com/ProjectBarks/STEMClasses",
         "title": "STEM Classes",
-        "image": "images/stemclasses.jpeg",
+        "image": "../assets/images//stemclasses.jpeg",
         "tags": [
           "Native Code",
           "Java",
@@ -416,7 +416,7 @@
         "id": "ioculist",
         "link": "https://github.com/springle/iOculist",
         "title": "iOculist",
-        "image": "images/ioculist.jpeg",
+        "image": "../assets/images//ioculist.jpeg",
         "tags": [
           "iOS",
           "Android",
@@ -438,7 +438,7 @@
           "HTML Templates",
           "Chrome Extension"
         ],
-        "image": "images/boostogy.jpeg",
+        "image": "../assets/images//boostogy.jpeg",
         "short_description": "Updates schoology to be more user friendly and intuitive!",
         "description": "Enhances Schoology with Tons of Features: Circle icons opposed to squares, Hiding classes, Rearrange classes, A stagnate sidebar and top bar, Infinite Scrolling, Removal of School Themes, Rename Classes, Popup Scroll Lock, Boostogy Settings, Quiz Highlighter and Tools, and Many minor tweaks."
       },
@@ -452,7 +452,7 @@
           "QuadTree",
           "Word Cloud"
         ],
-        "image": "images/wordiel.jpeg",
+        "image": "../assets/images//wordiel.jpeg",
         "short_description": "Advanced Collision Based Image Generation",
         "description": "Inspired by Wordle I attempted to make an Open Source version of API that would allow developers to easily generate word clouds. This was a fun project to make because it required an extensive math knowledge and pushed my technical ability to the next level implementing and learning algorithms to make my tool more efficient."
       },
@@ -467,7 +467,7 @@
           "Yelp",
           "Google Places"
         ],
-        "image": "images/middlemeets.jpeg",
+        "image": "../assets/images//middlemeets.jpeg",
         "short_description": "Spend Less Time Traveling and More Time Having Fun",
         "description": "Middle Meets is an Android application that relies on a Java RESTful server to provide it with its necessary map data. The application allows friends and acquaintances to easily meet at a center-point based off a list of locations. I enjoyed making this project because I saw a real need in the app market."
       },
@@ -482,7 +482,7 @@
           "Bootstrap",
           "RESTful"
         ],
-        "image": "images/stemhacks.jpeg",
+        "image": "../assets/images//stemhacks.jpeg",
         "short_description": "Planning Hackathons In One Place",
         "description": "STEMHacks Admin is an elegantly coded dashboard the centralizes my teams functions. I created STEMHacks as a basic automatic emailer for our sponsors but the project slowly snowballed into an entire dashboard with user, chat, broadcasting, support with many other tools. STEMHacks encompasses a lot of languages and frameworks increasing its complexity while increasing the team's productivity."
       },
@@ -496,7 +496,7 @@
           " Database Sync",
           " Serialization"
         ],
-        "image": "images/ftcscouter.jpeg",
+        "image": "../assets/images//ftcscouter.jpeg",
         "short_description": "Score FTC Match and Analyse Match Data",
         "description": "FTC Scouter is a Material Design Android application focused in collecting match data and analyzing it. The data is serialized in JSON and then converted into a mySQL database where Tableau visualizes the data. This application was fun to build because it required support for a large squee of devices and required a lot of libraries to simulate the Material Design look."
       },
@@ -512,7 +512,7 @@
           " SoundCloud",
           "Web Protocol"
         ],
-        "image": "images/beatsync.jpeg",
+        "image": "../assets/images//beatsync.jpeg",
         "short_description": "Seamless Audio Syncing Over the Web",
         "description": "After getting irritated when trying to listen to a song with my friend I decided to make BeatSync. BeatSync allows the user to create a playlist using their favorite streaming service and have the audio seamlessly synced between multiple devices. I enjoyed making this project because I ended up having to write my own web protocol that would allow the music to sync with no auditory difference."
       },
@@ -527,7 +527,7 @@
           "Website Bot",
           " Google App Engine"
         ],
-        "image": "images/laugher.jpeg",
+        "image": "../assets/images//laugher.jpeg",
         "short_description": "A Simple App To Tell Jokes",
         "description": "Comprised of a app engine host and an app, The Laugher, allows users to create and share jokes. This was a fun project to make not because of the sheer amount of funny jokes I saw, but the complexity of writing a bot that could scrape websites for jokes and classify them."
       },
@@ -541,7 +541,7 @@
           "SQL",
           "Efficiency"
         ],
-        "image": "images/infinitycache.jpeg",
+        "image": "../assets/images//infinitycache.jpeg",
         "short_description": "The Simplest Static Storage Available",
         "description": "EasyCache is a simplistic yet well documented caching library focused towards Android in making the retrieval and serialization of objects for short term storage simplistic. Using a combination of annotations and a strong class structure EasyCache makes it efficient to quickly retrieve and store objects for later."
       },
@@ -556,7 +556,7 @@
           "Node",
           "D3"
         ],
-        "image": "images/messenger.jpeg",
+        "image": "../assets/images//messenger.jpeg",
         "short_description": "Analyse Your Conversations through Natural Language Processing",
         "description": "Using Natural Language Processing and data management techniques FCE allows for a user to see the subjects brought up in a Facebook conversation and whether that conversation was a negative or positive experience. Using libraries such as D3 and NLTK the application makes it easy to display conversation metrics and information. I thoroughly enjoyed making this because it was something I hadn't experimented with before"
       },
@@ -570,7 +570,7 @@
           "bitbar",
           "python"
         ],
-        "image": "images/bitbar.jpeg",
+        "image": "../assets/images//bitbar.jpeg",
         "short_description": "Quick And Simple Way To Take Screenshots",
         "description": "Built ontop of BitBar, a simple dock framework, the tool allows for easy screenshots. The app utilizes AppleScript and shell to activate the machines screen capture tool and then redirects the image to where the user wants."
       },
@@ -585,7 +585,7 @@
           "Custom Compilier",
           "Java"
         ],
-        "image": "images/dynapp.jpeg",
+        "image": "../assets/images//dynapp.jpeg",
         "short_description": "Advanced Dynamic Packaging System For On The Fly App Modification",
         "description": "Using maven and a custom installer android apps can on the fly load code. The maven plugin uses the Android compiler to convert Java applications into native Android applications and copies to code into the phone's directory. The phone then uses a dynamic loader to easily inject the code into the program."
       },
@@ -601,7 +601,7 @@
           "Bluetooth",
           "Prosthetic"
         ],
-        "image": "images/prostheticarm.jpeg",
+        "image": "../assets/images//prostheticarm.jpeg",
         "short_description": "Neurally Controlling A Prostetic Arm Through EEG's",
         "description": "Using the Emotive EPOC headset, a simple pattern recognition algorithm, and a Bluetooth interface a LEGO prosthetic arm can be controlled through thought. The headset takes in a raw EEG input then a  program made in C using the emotive developer library correlates certain thought patterns to a calibrated action. The application then activates the Lego Mindstorms through a Bluetooth connection. Currently, the hand only has two groups of movable fingers and the thumb; however, in newer versions of the prosthetic more hydraulic arms could be added. The project was recognized by multiple fairs and has a broad range of applications."
       }

@@ -1,3 +1,5 @@
+@import 'materialize-css/sass/materialize.scss';
+
 // Color Variables
 $primary-color: #0D47A1;
 $contrast-color: adjust-color($primary-color, $hue: 270deg, $saturation: 30, $lightness: 10);
@@ -283,6 +285,11 @@ h5.side {
   margin: 0;
   padding: 0;
 
+  .col .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .card-panel {
     margin: 30px;
     color: $dark-grey;
@@ -341,8 +348,8 @@ h5.side {
 
   .content {
     margin-top: 0 !important;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
     padding: 0;
   }
 
