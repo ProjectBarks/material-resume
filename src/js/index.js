@@ -1,6 +1,8 @@
+import '../sass/resume.scss';
+
 import $ from 'jquery';
 import Cookies from 'js-cookie';
-import 'materialize-css/dist/js/materialize.js';
+import 'materialize-css';
 
 $(document).ready(() => {
     ////////////////////////////////
@@ -169,5 +171,5 @@ $(document).ready(() => {
     ////////////////////////////////
     //            Navbar          //
     ////////////////////////////////
-    $('.button-collapse').sideNav();
+    //$('.button-collapse').sideNav();
 });

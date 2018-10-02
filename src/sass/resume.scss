@@ -1,4 +1,11 @@
-@import 'materialize-css/sass/materialize.scss';
+@import '~materialize-css/sass/materialize';
+
+$fa-font-path: '~font-awesome/fonts';
+
+@import '~font-awesome/scss/font-awesome';
+
+//change the url 
+$fa-font-path: '~font-awesome/fonts';
 
 // Color Variables
 $primary-color: #0D47A1;

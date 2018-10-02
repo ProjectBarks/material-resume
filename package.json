@@ -6,7 +6,7 @@
     "url": "https://github.com/ProjectBarks/material-resume.git"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot --mode development",
     "build": "webpack --mode production"
   },
   "main": "index.html",
@@ -25,6 +25,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.3.1",
+    "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "pug-html-loader": "^1.1.5",
     "raw-loader": "^0.5.1",
