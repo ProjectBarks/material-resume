@@ -5,8 +5,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 const src = (...p) => path.join(__dirname, 'src', ...p);
+const build = (...p) => path.join(__dirname, 'build', ...p);
+
+const isProduction = true;;
 
 const pug = {
     test: /\.pug$/,
@@ -26,20 +31,13 @@ const images = {
     use: [
         {
             loader: 'file-loader',
-            options: {
-                name: 'images/[name].[ext]',
-            }
+            options: { name: 'images/[name].[ext]' }
         }, {
             loader: 'image-webpack-loader',
             options: {
                 mozjpeg: {
                     progressive: true,
-                    quality: 65
-                },
-                // the webp option will enable WEBP
-                webp: {
-                    method: 6,
-                    quality: 75
+                    dcScanOpt: 2
                 }
             }
         }
@@ -49,8 +47,11 @@ const images = {
 const scss = {
     test: /\.(sass|scss)$/,
     use: [
-        MiniCssExtractPlugin.loader,
-        'css-loader',
+        isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+        {
+            loader: 'css-loader',
+            options: { minimize: isProduction }
+        },
         'sass-loader'
     ]
 };
@@ -76,6 +77,17 @@ const config = {
             filename: 'index.html',
             template: src('templates', 'index.pug'),
             inject: true
+        }),
+        new PurgecssPlugin({
+            paths: [ build('index.html'), build('main.css') ],
+            whitelist: [ 'animate-out', 'animate', 'mini' ]
+        }), 
+        new ImageminWebpWebpackPlugin({
+            config: [{
+                test: /\.(jpe?g|png)$/,
+                options: { method: 6 }
+            }],
+            detailedLogs: true
         })
     ]
 };

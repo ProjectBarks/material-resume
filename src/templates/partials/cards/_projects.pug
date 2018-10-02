@@ -2,7 +2,7 @@ mixin card(id, title, tags, description, short_description, image, link)
     .card
         a( name= id)
         .card-image.waves-effect.waves-block.waves-light
-                img.activator(src=image)
+                img.activator(src=image, alt=short_description)
         .card-content
             span.card-title.activator #{title}
                 i.material-icons.small.right more_vert
@@ -14,7 +14,7 @@ mixin card(id, title, tags, description, short_description, image, link)
                 p #{description}
                     if link
                         br
-                        a( href= link, target='blank') More Info
+                        a(href=link, target='_blank', rel='noopener') More Info
                 if tags
                     .chips
                         each tag in tags

@@ -1,8 +1,7 @@
 doctype html
-html.disable-scroll
-    head(lang=language)
-        title
-            | #{locals.name} - #{locals.title}
+html(lang='en')
+    head
+        title #{locals.name} - #{locals.title}
 
         //Basic Meta Tags
         meta(http-equiv='content-type', content='text/html; charset=UTF-8')
@@ -23,13 +22,11 @@ html.disable-scroll
         meta(name='twitter:image' content=locals.biography.photo)
 
         //Stylesheets
-        link( href= 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet' )
+        link(href= 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
     //- Body Layout Starts
     body(class=['blue-grey', 'lighten-5'])
         main
-            include partials/_introduction
-
             .fixed-action-btn: a.btn-floating.btn-large.waves-effect.waves-light.red(href=locals.resume, download)
                 i.material-icons file_download
 

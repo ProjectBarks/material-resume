@@ -15,81 +15,6 @@ $dark-grey: #333;
 $light-grey: #888;
 $light-text: lighten($primary-color, 55%);
 
-/* INTRODUCTION */
-.disable-scroll {
-  overflow: hidden;
-}
-
-.load-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: $primary-dark;
-  z-index: 1000;
-
-  .prelabel {
-    font-weight: bold;
-  }
-
-  .typed-strings {
-    display: none;
-  }
-
-  * {
-    color: $light-text;
-  }
-
-  .loader {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    width: 80%;
-    max-width: 978px;
-  }
-
-  .typed-cursor {
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-moz-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
 
 // Styles
 * {
@@ -306,10 +231,6 @@ h5.side {
       margin-top: 0;
       color: rgba(0, 0, 0, 0.87);
       font-weight: 300;
-
-      a {
-        text-decoration: underline;
-      }
     }
 
     h4 {
@@ -320,7 +241,7 @@ h5.side {
 
     h5 {
       font-size: 100%;
-      color: lighten($primary-color, 40);
+      color: $primary-color;
       text-transform: uppercase;
     }
 

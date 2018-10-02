@@ -6,5 +6,5 @@
     p.side
         each contact in locals.contact.items
             i( class= ['fa', 'tiny', contact.icon]) &nbsp;&nbsp;
-            a( href=contact.href, target= (contact.blank ? '_blank' : '_self')) #{contact.value}
+            a(href=contact.href, target=(contact.blank ? '_blank' : '_self'), rel='noopener') #{contact.value}
             br

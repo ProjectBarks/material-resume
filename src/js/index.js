@@ -1,59 +1,9 @@
 import '../sass/resume.scss';
 
 import $ from 'jquery';
-import Cookies from 'js-cookie';
 import 'materialize-css';
 
 $(document).ready(() => {
-    ////////////////////////////////
-    //        Introduction        //
-    ////////////////////////////////
-    function easyType(item, callback) {
-        item.typed({
-            strings: [item.attr('data')],
-            showCursor: false,
-            callback: callback || (() => {})
-        })
-    }
-
-    function disableLoader() {
-        const wrapper = $('.load-wrapper');
-        $('html').removeClass('disable-scroll');
-        wrapper.fadeOut(250, () => {
-            wrapper.css({display: 'none'});
-        });
-    }
-
-    function textFromBackground(r, g, b) {
-
-        // Counting the perceptive luminance
-        // human eye favors green color...
-        const a = 1 - (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-        return (a < 0.5) ? '#212121' : '#ffffff';
-    }
-
-    if (Cookies.get('visited') == null) {
-        easyType($('.loader .prelabel'), () => {
-            setTimeout(() => {
-                const label = $('.loader .label');
-                easyType(label, () => {
-                    label.append(`<span class='typed'></span>`);
-                    $('.typed').typed({
-                        strings: $('.typed-strings span').map(function () {
-                            return $(this).text()
-                        }).toArray(),
-                        backDelay: 500,
-                        callback: disableLoader
-                    });
-                });
-            }, 500);
-        });
-    } else {
-        disableLoader();
-    }
-
-    Cookies.set('visited', 'yes', { expires: 365, path: '/'});
-
     ////////////////////////////////
     //     Side Bar Controls      //
     ////////////////////////////////
