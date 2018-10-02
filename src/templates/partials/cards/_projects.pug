@@ -1,8 +1,11 @@
+include ../_img
+
 mixin card(id, title, tags, description, short_description, image, link)
     .card
         a( name= id)
         .card-image.waves-effect.waves-block.waves-light
                 img.activator(src=image, alt=short_description)
+                //+img(image, short_description).activator
         .card-content
             span.card-title.activator #{title}
                 i.material-icons.small.right more_vert

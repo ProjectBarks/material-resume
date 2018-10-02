@@ -6,7 +6,7 @@
     "url": "https://github.com/ProjectBarks/material-resume.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --hot --mode development",
+    "start": "webpack-dev-server --hot --watch --mode development",
     "build": "webpack --mode production"
   },
   "main": "index.html",

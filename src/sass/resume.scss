@@ -70,6 +70,19 @@ footer.page-footer {
   will-change: transform;
   z-index: 1;
 
+  &.col .row {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  h4 {
+    margin: 0.912rem 0 0.912rem 0;
+  }
+
+  h5 {
+    margin: 0.656rem 0 0.656rem 0;
+  }
+
   &.animate-out .portrait {
     transition-duration: 0.35s;
     transition-property: padding-top, min-height;
@@ -151,10 +164,6 @@ footer.page-footer {
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
 }
 
-h5.side {
-  font-size: 110%;
-}
-
 .facts-wrapper {
   margin-top: 12.5px;
 
@@ -211,16 +220,16 @@ h5.side {
 
 }
 
+.col .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* MAIN PANEL AREA */
 #main-panel {
   float: right;
   margin: 0;
   padding: 0;
-
-  .col .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
 
   .card-panel {
     margin: 30px;
