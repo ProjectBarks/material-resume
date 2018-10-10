@@ -1,16 +1,18 @@
 {
   "name": "Resume",
-  "version": "0.0.1",
+  "version": "1.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ProjectBarks/material-resume.git"
   },
   "scripts": {
     "start": "webpack-dev-server --hot --watch --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "preview": "npm run build && http-server ./build/ -o",
+    "release": "rm -rf ./build/ && npm run build && PACKAGE_VERSION=$(node -p -e 'require(\"./package.json\").version') && gh-pages -d \"./build/\" -r \"git@github.com:ProjectBarks/projectbarks.github.io.git\" -m \"Release version $PACKAGE_VERSION\" -b master"
   },
   "main": "index.html",
-  "author": "Brandon Barker <brandon@brandonbarker.me> (http://brandonbarker.me/)",
+  "author": "Brandon Barker <brandon@brandonbarker.me> (https://brandonbarker.me/)",
   "license": "MIT",
   "dependencies": {
     "font-awesome": "^4.7.0",
@@ -18,8 +20,10 @@
     "materialize-css": "^1.0.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^4.3.1",
@@ -33,6 +37,7 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-pwa-manifest": "^3.7.1"
   }
 }

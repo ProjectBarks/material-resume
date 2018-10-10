@@ -1,17 +1,20 @@
 // webpack.config.js
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebpWebpackPlugin= require('imagemin-webp-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 const src = (...p) => path.join(__dirname, 'src', ...p);
 const build = (...p) => path.join(__dirname, 'build', ...p);
 
-const isProduction = true;;
+const isProduction = true;
 
 const pug = {
     test: /\.pug$/,
@@ -36,8 +39,7 @@ const images = {
             loader: 'image-webpack-loader',
             options: {
                 mozjpeg: {
-                    progressive: true,
-                    dcScanOpt: 2
+
                 }
             }
         }
@@ -79,15 +81,43 @@ const config = {
             inject: true
         }),
         new PurgecssPlugin({
-            paths: [ build('index.html'), build('main.css') ],
+            paths: glob.sync(src('**', '*'), { nodir: true }),
             whitelist: [ 'animate-out', 'animate', 'mini' ]
         }), 
-        new ImageminWebpWebpackPlugin({
+        /*new ImageminWebpWebpackPlugin({
             config: [{
                 test: /\.(jpe?g|png)$/,
                 options: { method: 6 }
             }],
             detailedLogs: true
+        }),*/
+        new CopyWebpackPlugin([
+            {
+                from: src('assets', 'downloads'),
+                to: build('downloads')
+            },
+            {
+                from: src('CNAME'),
+                to: build()
+            }
+        ]),
+        new WebpackPwaManifest({
+            filename: 'manifest.json',
+            name: 'Brandon Barker Resume',
+            short_name: 'BB Resume',
+            theme_color: '#2196f3',
+            background_color: '#008eff',
+            display: 'browser',
+            orientation: 'portrait',
+            scope: '/', // TODO -- enable icon
+            start_url: '/'/*,
+            icons: [
+                {
+                    src: path.resolve('src/images/icon.png'),
+                    sizes: [96, 128, 192, 256, 384, 512],
+                    destination: path.join('assets', 'icons')
+                }
+            ]*/
         })
     ]
 };
