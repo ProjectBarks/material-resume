@@ -10,6 +10,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin= require('imagemin-webp-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const src = (...p) => path.join(__dirname, 'src', ...p);
 const build = (...p) => path.join(__dirname, 'build', ...p);
@@ -109,15 +110,19 @@ const config = {
             background_color: '#008eff',
             display: 'browser',
             orientation: 'portrait',
-            scope: '/', // TODO -- enable icon
-            start_url: '/'/*,
+            scope: '/', 
+            start_url: '/',
             icons: [
                 {
-                    src: path.resolve('src/images/icon.png'),
+                    src: src('assets', 'favicon.png'),
                     sizes: [96, 128, 192, 256, 384, 512],
-                    destination: path.join('assets', 'icons')
+                    destination: path.join('images', 'icons')
                 }
-            ]*/
+            ]
+        }),
+        new FaviconsWebpackPlugin({
+            logo: src('assets', 'favicon.png'),
+            prefix: 'images/favicons/'
         })
     ]
 };

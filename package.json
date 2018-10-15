@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --watch --mode development",
     "build": "webpack --mode production",
-    "preview": "npm run build && http-server ./build/ -o",
+    "preview": "http-server ./build/ -o",
     "release": "rm -rf ./build/ && npm run build && PACKAGE_VERSION=$(node -p -e 'require(\"./package.json\").version') && gh-pages -d \"./build/\" -r \"git@github.com:ProjectBarks/projectbarks.github.io.git\" -m \"Release version $PACKAGE_VERSION\" -b master"
   },
   "main": "index.html",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "favicons-webpack-plugin": "0.0.9",
     "file-loader": "^2.0.0",
     "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
