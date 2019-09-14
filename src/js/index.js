@@ -70,8 +70,7 @@ $(document).ready(() => {
         scrollMode.checkMargins();
     });
 
-    $(document).scroll(scrollMode.refresh);
-
+    document.addEventListener('scroll', scrollMode.refresh, { passive: true });
     //Set the sidebar height
     checkSidebarHeight();
     //Check if scrolling needs to be refreshed

@@ -1,5 +1,3 @@
-// webpack.config.js
-const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
@@ -10,7 +8,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpWebpackPlugin= require('imagemin-webp-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const src = (...p) => path.join(__dirname, 'src', ...p);
 const build = (...p) => path.join(__dirname, 'build', ...p);
@@ -24,7 +22,7 @@ const pug = {
         {
             loader: 'pug-html-loader',
             options: {
-                data: (() => JSON.parse(fs.readFileSync(src('templates', 'content', 'bbarker.json'))))()
+                data: src('templates', 'content', 'bbarker.json')
             }
         }
     ]
@@ -70,6 +68,14 @@ const fonts = {
 const config = {
     entry: src('js', 'index.js'),
     output: { path: path.resolve(__dirname, 'build') },
+    resolveLoader: {
+        alias: {
+            'pug-html-loader': path.join(__dirname, './webpack-pug-html-loader.js')
+        }
+    },
+    devServer: {
+        watchContentBase: true
+    },
     module: { rules: [ pug, images, scss, fonts ] },
     plugins: [
         new MiniCssExtractPlugin({

@@ -62,6 +62,15 @@
       {
         "title": "Work Experience",
         "items": [
+           {
+            "title": "Software Engineer Intern",
+            "organization": "Cesium GS",
+            "link": "http://cesium.com/",
+            "location": "Philadelphia, CA",
+            "start": "May 2019",
+            "end": "Aug 2019",
+            "description": "SaaS platform that empowers developers and data providers to build dynamic 3D geospatial applications. Built integrations for popular 3D content creation tools - such as photogrammetry and 3D modeling packages - for easy workflows to upload to Cesium ion to generate 3D Tiles for use in CesiumJS and other 3D engines."
+          },
           {
             "title": "Software Engineer Intern",
             "organization": "comma.ai",
@@ -113,12 +122,21 @@
         "title": "Activities and Events",
         "items": [
           {
+            "title": "Founder & Lead Organizer",
+            "organization": "HackWCU",
+            "link": "https://hackwcu.org/",
+            "location": "West Chester University",
+            "start": "Dec 2018",
+            "end": "Present",
+            "description": "Founded West Chester University's' first hackathon. Registered over 300 students of which 150 attended. Within three months, raised $20,000 in sponsorship. Manage a team of five to help organize, market, and finance future hackathons."
+          },
+          {
             "title": "Vice President",
             "organization": "Computer Science Club",
             "location": "West Chester University",
             "start": "Sep 2017",
             "end": "Present",
-            "description": "Organize club events to help enhance understanding of Computer Science topics while opening opportunities for internships. Currently perusing two new initiatives to help enhance the schools atmosphere: <a rel='noopener' href='http://hackwcu.org/' target='_blank'>HackWCU</a>, a hackathon in the Philadelphia area where students are free to explore their interests. Innovate, a makerspace open to all students with over 10,000$ of hardware. "
+            "description": "Organize club events to help enhance understanding of Computer Science topics while opening opportunities for internships. Currently perusing two new initiatives to help enhance the schools atmosphere: <a rel='noopener' href='http://hackwcu.org/' target='_blank'>HackWCU</a>, a hackathon in the Philadelphia area where students are free to explore their interests. Innovate, a makerspace open to all students with over $10,000 of hardware. "
           },
           {
             "title": "Analyst",
@@ -126,7 +144,7 @@
             "location": "West Chester University",
             "start": "Sep 2017",
             "end": "Present",
-            "description": "Evaluated stocks to be purchased for the growth fund – worth over $20,000. Pitched stocks to be purchased for the fund; representing 50% growth since recommendation. Collaborating with current leadership to implement a more analytics-oriented approach for evaluating other funds and performance."
+            "description": "Evaluate stocks to be purchased for the growth fund – worth over $20,000. Pitch stocks to be purchased for the fund; representing 50% growth since recommendation. Collaborating with current leadership to implement a more analytics-oriented approach for evaluating other funds and performance."
           },
           {
             "title": "Head of Technology",
@@ -138,26 +156,42 @@
             "description": "Volunteered to help a local non-profit with their website and technical needs. Migrated them to a different web platform and currently developing their website. Work with the non-profit for about three hours every week."
           },
           {
-            "title": "Founder and Head Organizer",
+            "title": "Founder & Lead Organizer",
             "organization": "STEMHacks Hackathon",
             "location": "STEM Academy",
             "start": "Jun 2014",
             "end": "May 2017",
-            "description": "One of a few high school hackathons in the Pennsylvania. The event strives to get high schoolers interested and involved in technology, having a influence of over 400+ students around the country! By providing a fun outlet for students to invent STEMHacks helped to create the future of innovators."
+            "description": "Organized the first high school hackathons in Pennsylvania. STEMHack's mission was to get high schoolers interested and involved in technology! Reached $10,000 in sponsorshop and 100 in atteendance in the first year."
           },
           {
-            "title": "Head Software Developer",
+            "title": "Lead Software Developer",
             "organization": "Out of the Box Robotics",
             "location": "Coatesville, PA",
             "start": "Sep 2011",
             "end": "May 2017",
-            "description": "A competitive team in the FIRST league winning up to the East Regional Competition. Develop utility applications to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
+            "description": "A competitive team in the FIRST league winning up to the East Regional Competition. Developed utilities to assist in the usage or construction of the robot. Mentored other teams in programming and software design. Wrote the software to control the autonomous and drive portion of the robot."
           }
         ]
       },
       {
         "title": "Awards",
         "items": [
+          {
+            "title": "Top 10, Best Hardware Hack, Best Health Hack",
+            "organization": "PennApps Hackathon",
+            "link": "http://www.ycphacks.io/",
+            "location": "York, PA",
+            "start": "Oct 2017",
+            "description": "Participated in the longest-standing hackathon against 242 competing teams, reaching the top 10.  Engineered an assistive device for cross-space navigation and obstacle avoidance through SLAM with haptic feedback."
+          },
+          {
+            "title": "Organizers' Choice Award, Best Hack that Promotes Accessibility",
+            "organization": "DragonHacks Hackathon",
+            "link": "http://www.ycphacks.io/",
+            "location": "York, PA",
+            "start": "Oct 2017",
+            "description": "Developed a big data app capable of finding any person with minimal amount of information scraping through Facebook, Whitepages, and other websites. Ended up being awarded for the best in the category after the tool demonstrated it's flexibility to the judges."
+          },
           {
             "title": "Best YCDS Hack",
             "organization": "YCPHacks Hackathon",
@@ -206,10 +240,6 @@
       "label": "Languages",
       "items": [
         {
-          "label": "Java",
-          "level": 100
-        },
-        {
           "label": "Python",
           "level": 100
         },
@@ -218,48 +248,36 @@
           "level": 100
         },
         {
+          "label": "Java",
+          "level": 100
+        },
+        {
           "label": "HTML / CSS / LESS",
           "level": 100
         },
         {
-          "label": "CoffeeScript",
-          "level": 100
-        },
-        {
           "label": "Bash",
-          "level": 100
-        },
-        {
-          "label": "Processing",
-          "level": 100
-        },
-        {
-          "label": "Visualforce",
-          "level": 100
-        },
-        {
-          "label": "AppleScript",
-          "level": 75
-        },
-        {
-          "label": "Lua",
-          "level": 70
-        },
-        {
-          "label": "Scala",
-          "level": 50
-        },
-        {
-          "label": "C++",
-          "level": 40
-        },
-        {
-          "label": "Groovy",
-          "level": 30
+          "level": 80
         },
         {
           "label": "C#",
-          "level": 30
+          "level": 75
+        },
+        {
+          "label": "CoffeeScript",
+          "level": 40
+        },
+        {
+          "label": "Visualforce",
+          "level": 40
+        },
+        {
+          "label": "C++",
+          "level": 20
+        },
+        {
+          "label": "Lua",
+          "level": 20
         }
       ]
     },
@@ -271,34 +289,49 @@
         "Mapbox",
         "Numpy",
         "Node.JS",
-        "Gulp",
         "Grunt",
-        "Makefile",
         "ReactJS",
         "JQuery",
-        "Spring",
         "Google Web Toolkit",
         "Maven",
-        "Gradle ",
-        "SBT",
+        "Gradle",
         "SQL",
         "Postgres",
         "Netty",
-        "Jackson/Json",
-        "JDBI",
+        "JSON",
         "Google App Engine",
         "Amazon Web Services",
         "Heroku",
         "Django",
         "Docker",
-        "web2py",
-        "Flask"
+        "Flask",
+        "ARCore",
+        "Android",
+        "REST",
+        "Webpack",
+        "Twilio",
+        "Git",
+        "Semantic UI",
+        "Bootstrap",
+        "Docker",
+        "Django",
+        "Intel Realsense"
       ]
     }
   },
   "research": {
     "label": "Research & Articles",
     "items": [
+      {
+        "link": "https://cesium.com/blog/2019/08/06/webodm-ships-with-cesium-ion/",
+        "title": "Share Massive Drone Captures Directly from WebODM with Cesium ion",
+        "description": "WebODM allows users to generate point clouds, 3D models, and terrain from aerial images. With this Cesium ion integration, users can also fuse the data they’ve collected with other geospatial datasets, such as Cesium World Terrain, all placed in an accurate global context."
+      },
+      {
+        "link": "https://cesium.com/blog/2019/07/08/blender-addon/",
+        "title": "Massive Models from Blender with Cesium ion",
+        "description": "Add-on that makes it easier to publish and stream 3D models on the web via Cesium ion. Using the official Khronos glTF Blender exporter to convert the model to glTF before uploading to ion for tiling."
+      },
       {
         "link": "https://medium.com/@comma_ai/hd-maps-for-the-masses-9a0d582dd274",
         "title": "HD Maps for the Masses",

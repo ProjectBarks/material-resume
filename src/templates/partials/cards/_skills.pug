@@ -26,5 +26,6 @@
 
     h5 #{locals.skill.framework.label}
     .row
-        each framework in locals.skill.framework.items
+        - var frameworks = locals.skill.framework.items.sort((a, b) => a.localeCompare(b))
+        each framework in frameworks
             .col.s6.l3 #{framework}
