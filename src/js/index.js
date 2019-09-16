@@ -80,20 +80,21 @@ $(document).ready(() => {
     ////////////////////////////////
     //     Card Controls & Color  //
     ////////////////////////////////
-    let lastClicked = null;
-
-    $('#projects').find('.card').each(function() {
-        const card = $(this);
+    $('#projects').find('.card').each((i, elm) => {
+        const card = $(elm);
 
         card.find('.activator').click(() => {
-            if (lastClicked != null) {
-                lastClicked.find('.disabler').click();
+            const isOpen = card.hasClass('open');
+            if (isOpen) {
+                card.removeClass('open');
+            } else {
+                card.addClass('open');
+                setTimeout(() =>
+                    $('html, body').animate({
+                        scrollTop: card.offset().top - ($(window).height() / 2) + (card.height() / 2)
+                    }, 150),
+                150);
             }
-            lastClicked = card;
-        });
-
-        card.find('.disabler').click(() => {
-            lastClicked.find('.waves-ripple').remove();
         });
     });
 

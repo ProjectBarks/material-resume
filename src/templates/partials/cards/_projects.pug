@@ -2,26 +2,28 @@ include ../_img
 
 mixin card(id, title, tags, description, short_description, image, link)
     .card
-        a( name= id)
-        .card-image.waves-effect.waves-block.waves-light
-                img.activator(src=image, alt=short_description)
+        a(name=id)
+        .card-image.waves-effect.waves-light.activator
+                img(src=image, alt=short_description)
                 //+img(image, short_description).activator
         .card-content
             span.card-title.activator #{title}
-                i.material-icons.small.right more_vert
+                i.hide-on-large-only.material-icons.small.right.arrow expand_more
             p #{short_description}
-        .card-reveal
-            .content 
-                span.card-title.grey-text.text-darken-4.disabler #{title}
-                    i.material-icons.small.right close
-                p #{description}
-                    if link
-                        br
-                        a(href=link, target='_blank', rel='noopener') More Info
+            .reveal 
+                hr
+                p !{description.replace(/\n/g, '<br/>')}
                 if tags
                     .chips
                         each tag in tags
                             .chip.hide-on-med-and-down #{tag}
+                if link
+                    hr
+                    a(href=link, target='_blank', rel='noopener').waves-effect.waves-light
+                        i.material-icons.right open_in_new
+                        | More Info
+
+
 .row
     - var length = locals.project.items.length
     - var halfLength = Math.ceil(length / 2)

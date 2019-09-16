@@ -50,6 +50,10 @@ a {
   color: $primary-color;
 }
 
+.weak-hide {
+  display: none;
+}
+
 /* Footer */
 main .row, footer.page-footer {
   margin: 0;
@@ -291,21 +295,52 @@ footer.page-footer {
     padding: 0;
   }
 
-  .card .content {
+  @media #{$medium-and-down} {
+    .card.open {
+      .reveal {
+        max-height: 600px;
+        overflow: hidden;
+      }
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .card .arrow {
+    transition: transform ease-in-out 0.3s;
+  }
+
+  @media #{$large-and-up} {
+    .card .activator {
+      pointer-events: none;
+    }
+  }
+
+  .card .reveal {
     display: flex;
     flex-flow: column;
-    margin: 0;
     height: 100%;
 
+    @media #{$medium-and-down} {
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    hr {
+      margin: 24px -24px !important;
+      border: 0;
+      border-top: #e7e6e7 1px solid;
+    }
+
     p {
-      flex: 1;
-      overflow: auto;
       font-weight: 300;
     }
 
     .chips {
       border: none;
-      margin: 0;
+      margin: 12px 0 0 0;
+      min-height: 0;
 
       .chip {
         display: inline-block;

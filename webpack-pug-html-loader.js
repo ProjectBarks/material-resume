@@ -48,6 +48,7 @@ module.exports = function (source) {
             data = query.data || {};
         }
     } catch (ex) {
+        console.log(ex);
         cachedDeps.forEach(this.addDependency);
         this.callback(ex);
         return;

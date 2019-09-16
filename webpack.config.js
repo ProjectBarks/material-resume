@@ -89,7 +89,7 @@ const config = {
         }),
         new PurgecssPlugin({
             paths: glob.sync(src('**', '*'), { nodir: true }),
-            whitelist: [ 'animate-out', 'animate', 'mini' ]
+            whitelist: [ 'animate-out', 'animate', 'mini', 'waves-ripple' ]
         }), 
         /*new ImageminWebpWebpackPlugin({
             config: [{
