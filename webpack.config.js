@@ -33,7 +33,7 @@ const images = {
     use: [
         {
             loader: 'file-loader',
-            options: { name: 'images/[name].[ext]' }
+            options: { name: 'images/[name]-[hash].[ext]' }
         }, {
             loader: 'image-webpack-loader',
             options: {
@@ -67,7 +67,7 @@ const fonts = {
 
 const config = {
     entry: src('js', 'index.js'),
-    output: { path: path.resolve(__dirname, 'build') },
+    output: { path: path.resolve(__dirname, 'build'), filename: '[name]-[hash].js'},
     resolveLoader: {
         alias: {
             'pug-html-loader': path.join(__dirname, './webpack-pug-html-loader.js')
@@ -79,7 +79,7 @@ const config = {
     module: { rules: [ pug, images, scss, fonts ] },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name]-[hash].css',
             chunkFilename: '[id].css'
         }),
         new HtmlWebpackPlugin({
