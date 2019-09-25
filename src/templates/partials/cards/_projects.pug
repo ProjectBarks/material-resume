@@ -8,7 +8,7 @@ mixin card(id, title, tags, description, short_description, image, link)
                 //+img(image, short_description).activator
         .card-content
             span.card-title.activator #{title}
-                i.hide-on-large-only.material-icons.small.right.arrow expand_more
+                i.material-icons.small.right.arrow expand_more
             p #{short_description}
             .reveal 
                 hr
@@ -24,7 +24,7 @@ mixin card(id, title, tags, description, short_description, image, link)
                         | More Info
 
 
-.row
+.content: .row
     - var length = locals.project.items.length
     - var halfLength = Math.ceil(length / 2)
     .col.l6.s12

@@ -1,5 +1,5 @@
 //- skills
-.col.s12
+.card-panel
     h4 #{locals.skill.label}
     h5 #{locals.skill.language.label}
     mixin languagelevel(label, level)
@@ -10,7 +10,7 @@
             br
     .row
         - var length = locals.skill.language.items.length
-        - var halfLength = Math.floor(length / 2)
+        - var halfLength = Math.ceil(length / 2)
         .col.s6
             - var x = 0
             while (x < halfLength)

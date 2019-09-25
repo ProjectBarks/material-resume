@@ -1,5 +1,5 @@
 //- work
-.col.s12.job
+.card-panel.job
     h4 #{locals.job.label}
     - var group = 0
     each highlight in locals.job.highlights
@@ -7,19 +7,22 @@
         - var id = 0
         if highlight.items
             each item in highlight.items
-                .row 
-                    .experience(data-id=id, data-group=group)
-                        .col.l9.s12
-                            if item.link
-                                a(href=item.link, target='_blank', rel='noopener') #{item.organization}&nbsp;
-                            else
-                                | #{item.organization}&nbsp;
-                            | &mdash;
-                            | #{item.title}
-                            | &mdash; #{item.location}
-                        .col.duration.l3.hide-on-med-and-down.right-align #{item.start}
-                            if item.end
-                                | &nbsp;&mdash;&nbsp;#{item.end}
+                .row.experience(data-id=id, data-group=group)
+                    .col.l9.s12
+                        if item.link
+                            a(href=item.link, target='_blank', rel='noopener') #{item.organization}&nbsp;
+                        else
+                            | #{item.organization}&nbsp;
+                        | &mdash;
+                        | #{item.title}
+                        | &mdash; #{item.location}
+                    .col.duration.l3.hide-on-med-and-down.right-align #{item.start}
+                        if item.end
+                            | &nbsp;&mdash;&nbsp;#{item.end}
                     p !{item.description}
+                    if item.bullets
+                        ul.browser-default.hide-on-small-and-down
+                            each bullet in item.bullets
+                                li #{bullet}
                 - id += 1
         - group += 1

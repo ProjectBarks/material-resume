@@ -1,25 +1,20 @@
 #main-panel.col.s12.m7.l8
-    //- Experience
-    .card-panel
-        .row
-            include cards/_experience
-
-    //- Research
-    .card-panel
-        .row
-            include cards/_research
+    //- Experience    
+    include cards/_experience
 
     //- Skills
-    .card-panel
-        .row
-            include cards/_skills
+    include cards/_skills
+
+    //- Research
+    include cards/_research
+
+    //- Education
+    include cards/_education
 
     #projects
-        .card-panel.header
-            .row
-                include cards/_projects_title
+        
+        include cards/_projects_title
 
-        .row.content
-            include cards/_projects
+        include cards/_projects
 
     include _footer

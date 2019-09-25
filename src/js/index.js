@@ -3,6 +3,9 @@ import '../sass/resume.scss';
 import $ from 'jquery';
 import 'materialize-css';
 
+const ANIMATION_END = ['webkitTransitionEnd', 'otransitionend', 'oTransitionEnd', 'msTransitionEnd', 'transitionend'].join(' ');
+
+
 $(document).ready(() => {
     ////////////////////////////////
     //     Side Bar Controls      //
@@ -10,7 +13,8 @@ $(document).ready(() => {
     const sideNav = $('#side-nav');
     const portraitWrapper = sideNav.find('.portrait-wrapper');
 
-    sideNav.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
+
+    sideNav.on(ANIMATION_END,
         () => {
             sideNav.removeClass('animate');
             sideNav.removeClass('animate-out');
@@ -89,11 +93,10 @@ $(document).ready(() => {
                 card.removeClass('open');
             } else {
                 card.addClass('open');
-                setTimeout(() =>
-                    $('html, body').animate({
-                        scrollTop: card.offset().top - ($(window).height() / 2) + (card.height() / 2)
-                    }, 150),
-                150);
+                 $('html, body').animate(
+                     { scrollTop: card.offset().top - ($(window).height() / 2) + (card[0].scrollHeight / 2) },
+                     150
+                 );                
             }
         });
     });
