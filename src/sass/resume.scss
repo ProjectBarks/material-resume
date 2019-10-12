@@ -252,12 +252,12 @@ footer.page-footer {
 
     h4 {
       font-weight: 500;
-      font-size: 160%;
+      font-size: 200%;
       color: $dark-grey;
     }
 
     h5 {
-      font-size: 100%;
+      font-size: 110%;
       color: $primary-color;
       text-transform: uppercase;
     }
@@ -276,10 +276,14 @@ footer.page-footer {
     }
 
     a {
-      transition: color ease-in-out 0.15s;
-      
+      transition: all ease-in-out 0.15s;
+      background-repeat: no-repeat;
+      text-decoration: underline;
+      text-decoration-color: $dark-grey;
+
       &:hover {
         color: $primary-color;
+        text-decoration-color: $primary-color;
       }
     }
 

@@ -123,6 +123,4 @@ $(document).ready(() => {
 
     // Automatically update year
     $('#end-date').text(Math.max(new Date().getFullYear(), 2016));
-
-
 });
