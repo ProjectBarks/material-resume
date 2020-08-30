@@ -11,7 +11,7 @@
                         | &nbsp;&mdash;&nbsp;#{item.end}
         .row.tags.fix-spacing
             each tag in item.tags
-                .col.s12.m12.l4: .tag.z-depth-1
+                .col.s12.m12.l4.tag-container: .tag.z-depth-1
                     i.material-icons #{tag.icon}
                     div.info
                         div.label #{tag.label}
@@ -19,7 +19,7 @@
 
     h5 #{locals.education.courses.label}
     .row.fix-spacing
-        - locals.education.courses.items.sort((a, b) => a.id.localeCompare(b.id))
+        - locals.education.courses.items
         each course in locals.education.courses.items
             .col.s12.m12.l4
                 strong #{course.id}

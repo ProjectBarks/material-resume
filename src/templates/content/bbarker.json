@@ -5,17 +5,7 @@
     "start": "2016",
     "value": "Copyright of Brandon Barker"
   },
-  "resume": "./downloads/brandon_barker_resume_2019.pdf",
-  "introduction": {
-    "prelabel": "Hi My Name is Brandon!",
-    "label": "I am a...",
-    "items": [
-      "Programmer",
-      "Inventor",
-      "Nerd",
-      "Tinkerer"
-    ]
-  },
+  "resume": "./downloads/brandon_barker_resume_2020.pdf",
   "biography": {
     "label": "Summary",
     "photo": "../assets/images/bbarker.jpeg",
@@ -41,7 +31,7 @@
     }, {
       "icon": "fa-linkedin",
       "value": "LinkedIn",
-      "href": "https://github.com/ProjectBarks",
+      "href": "https://www.linkedin.com/in/projectbarks/",
       "blank": true
     }, {
       "icon": "fa-instagram",
@@ -57,9 +47,21 @@
       "title": "Work Experience",
       "items": [{
         "title": "Software Engineer Intern",
+        "organization": "Uber",
+        "link": "http://uber.com/",
+        "location": "San Francisco, CA",
+        "start": "May 2020",
+        "end": "Aug 2020",
+        "description": "Collaborated with the Marketplace Data & Intelligence team to build largescale data analysis tooling.",
+        "bullets": [
+          "Addressed several areas within the software stack to deploy enhancements quickly while adapting to company paradigms.",
+          "Architected and implemented a dynamic <a target='_blank' href='https://eng.uber.com/visualizing-city-cores-with-h3/'>H3 Hexagon</a> clustering product to ease experimentation, a system crucial for Uber's machine learning models."
+        ]
+      }, {
+        "title": "Software Engineer Intern",
         "organization": "Cesium GS",
         "link": "http://cesium.com/",
-        "location": "Philadelphia, CA",
+        "location": "Philadelphia, PA",
         "start": "May 2019",
         "end": "Aug 2019",
         "description": "Worked within a SaaS platform that empowers developers and data providers to build dynamic 3D geospatial applications.",
@@ -178,6 +180,27 @@
     }, {
       "title": "Awards",
       "items": [{
+        "title": "Top 50 Hacker",
+        "organization": "Major League Hacking",
+        "link": "https://top.mlh.io/2020/profiles/brandon-barker",
+        "location": "New York City, NY",
+        "start": "Jan 2020",
+        "description": "Chosen from 100,000+ hackathon participants who exemplify diversity, technological innovation, and leadership; paving the way for the next generation of developers. See the Daily Local's <a target='_blank' href='https://www.dailylocal.com/news/coronavirus/young-hacker-wins-big-award/article_7bdf4538-96d6-11ea-8c64-cf47d80398f3.html'>profile</a>."
+      }, {
+        "title": "1871 Award",
+        "organization": "West Chester University",
+        "link": "https://www.wcupa.edu/_services/STU/1871award.aspx",
+        "location": "West Chester, PA",
+        "start": "Jan 2020",
+        "description": "Recognized university juniors and seniors who are high-achieving in both the academic and co-curricular realms. Each year, up to 71 students are honored for their outstanding accomplishments related to Academics, Leadership, Community Engagement, and Career Readiness."
+      }, {
+        "title": "Repair the World Scholarship",
+        "organization": "WCU Computer Science Department",
+        "link": "https://www.wcupa.edu/sciences-mathematics/computerScience/repairTheWorld.aspx",
+        "location": "West Chester, PA",
+        "start": "Jan 2020",
+        "description": "Awarded to four WCU Computer Science majors in each who are juniors or seniors and have high GPAs. Students must indicate how they intend to apply the knowledge they have gained in Computer Science to repairing the world."
+      }, {
         "title": "Top 10, Best Hardware Hack, Best Health Hack",
         "organization": "PennApps Hackathon",
         "link": "http://2019f.pennapps.com/",
@@ -193,7 +216,7 @@
         "description": "Devised a path-keeping system for the visually impaired seniors. Used ARCore to compare the expected path against the actual path, providing feedback accordingly. Managed planning and infrastructure between hardware and software systems."
       }, {
         "title": "Benjamin E. Faber Award",
-        "organization": "West Chester University",
+        "organization": "WCU Mathematics Department",
         "link": "https://www.wcupa.edu/sciences-mathematics/mathematics/banquet2018.aspx",
         "location": "West Chester, PA",
         "start": "Nov 2018",
@@ -289,7 +312,6 @@
         "Heroku",
         "Intel Realsense",
         "JQuery",
-        "JSON",
         "Mapbox",
         "Maven",
         "Netty",
@@ -309,6 +331,10 @@
   "research": {
     "label": "Research & Articles",
     "items": [{
+      "link": "https://www.wcupa.edu/president/bBarker.aspx",
+      "title": "WCU Junior Produces 3D Protective Gear for Frontline Workers",
+      "description": "Twenty or more hours a day, seven days a week, 3D printers in Brandon Barker’s Downingtown, Pa., basement churn out plastic shields that can help prevent the spread of COVID-19 when worn alone or in conjunction with a face mask."
+    }, {
       "link": "https://cesium.com/blog/2019/08/06/webodm-ships-with-cesium-ion/",
       "title": "Share Massive Drone Captures Directly from WebODM with Cesium ion",
       "description": "WebODM allows users to generate point clouds, 3D models, and terrain from aerial images. With this Cesium ion integration, users can also fuse the data they’ve collected with other geospatial datasets, such as Cesium World Terrain, all placed in an accurate global context."
@@ -351,25 +377,31 @@
     },
     "courses": {
       "label": "Courses",
-      "items": [{
+      "items": [ {
+        "label": "Parallel Computing",
+        "id": "MAT 581"
+      }, {
+        "label": "Natural Language Processing",
+        "id": "CSC 577"
+      }, {
         "label": "Introduction to Cryptography",
         "id": "MAT 415"
+      }, {
+        "label": "Computer Algebra",
+        "id": "MAT 413"
+      }, {
+        "label": "Software Engineering",
+        "id": "MAT 402"
+      }, {
+        "label": "Programming Paradigms",
+        "id": "CSC 345"
       }, {
         "label": "Linear Algebra",
         "id": "MAT 311"
       }, {
         "label": "Calculus II",
         "id": "MAT 261"
-      }, {
-        "label": "Software Engineering",
-        "id": "MAT 261"
-      }, {
-        "label": "Programming Paradigms",
-        "id": "CSC 345"
-      }, {
-        "label": "Computer Algebra",
-        "id": "MAT 413"
-      }, {
+      },{
         "label": "Data Structures",
         "id": "CSC 241"
       } ]

@@ -1,6 +1,6 @@
 //- work
 .card-panel.job
-    h4 #{locals.job.label}
+    h4(style='margin-bottom: 0') #{locals.job.label}
     - var group = 0
     each highlight in locals.job.highlights
         h5 #{highlight.title}
@@ -23,6 +23,6 @@
                     if item.bullets
                         ul.browser-default.hide-on-small-and-down
                             each bullet in item.bullets
-                                li #{bullet}
+                                li !{bullet}
                 - id += 1
         - group += 1

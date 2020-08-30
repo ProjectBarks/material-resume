@@ -123,4 +123,43 @@ $(document).ready(() => {
 
     // Automatically update year
     $('#end-date').text(Math.max(new Date().getFullYear(), 2016));
+
+
+    ////////////////////////////////
+    //         Show More          //
+    ////////////////////////////////
+    const SHOW_MORE = `
+        <i class="material-icons right">arrow_drop_down</i>
+        Show More`;
+    const SHOW_LESS = `
+        <i class="material-icons right">arrow_drop_up</i>
+        Show LESS`;
+    const row_groups = $('.row.experience').toArray().reduce((acc, x) => {
+        const id = `${$(x).data('group')}`;
+        const data = acc[id] || [];
+        data.push($(x));
+        acc[id] = data;
+        return acc;
+    }, {});
+    delete row_groups['undefined'];
+    for (const row_group of Object.values(row_groups)) {
+        const hide_rows = row_group.slice(4, row_group.length);
+        if (hide_rows.length <= 0)
+            continue;
+        hide_rows.forEach(x => x.addClass('hidden'));
+        const [last_row] = hide_rows.slice(-1);
+        const btn = $(`<a data-open="false" class="waves-effect waves-light btn primary-color show-more">${SHOW_MORE}</a>`)
+           .insertAfter(last_row)
+           .click(() => {
+               if (btn.data('open')) {
+                    btn.html(SHOW_MORE);
+                    hide_rows.forEach(x => x.addClass('hidden'));
+               } else {
+                    btn.html(SHOW_LESS);
+                    hide_rows.forEach(x => x.removeClass('hidden'));
+               }
+               btn.data('open', !btn.data('open'))
+           });
+
+    }
 });

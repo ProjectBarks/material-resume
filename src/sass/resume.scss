@@ -68,6 +68,15 @@ footer.page-footer {
   }
 }
 
+a[class*='btn'].primary-color {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: lighten($primary-color, 10%) !important;
+    color: $light-text !important;
+  }
+}
+
 /* SIDEBAR */
 #side-nav {
   margin-bottom: 0;
@@ -447,6 +456,23 @@ footer.page-footer {
   .col {
     padding: 0;
   }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+// Job Experience
+.job {
+  display: flex;
+  flex-direction: column;
+
+  .show-more {
+    flex: 0 0;
+    width: auto;
+    align-self: center;
+    text-decoration: none !important;
+  }
 }
 
 // Skills
@@ -499,11 +525,28 @@ footer.page-footer {
       line-height: 2.5vw;
     }
   }
+
+  .education .tags .tag-container {
+    &:first-child .tag {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child) .tag {
+      border-radius: 0;
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &:last-child .tag {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
 }
 
 // Handle Mobile
 @media (max-width: 600px) {
-
   .portrait {
     max-height: none;
   }
