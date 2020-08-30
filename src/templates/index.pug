@@ -24,6 +24,15 @@ html(lang='en')
         //Stylesheets
         link(href= 'https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
+        // Tracking
+        script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-176738018-1')
+        script.
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-176738018-1');
+
+
     //- Body Layout Starts
     body(class=['blue-grey', 'lighten-5'])
         main
